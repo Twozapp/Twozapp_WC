@@ -208,10 +208,10 @@
    
 }
 
-//- (void)setOriginalBackgroundColor:(UIColor *)originalBackgroundColor {
-//    _originalBackgroundColor = originalBackgroundColor;
-//    self.backgroundColor = [UIColor whiteColor];
-//}
+- (void)setOriginalBackgroundColor:(UIColor *)originalBackgroundColor {
+    _originalBackgroundColor = originalBackgroundColor;
+    self.backgroundColor = [UIColor clearColor];
+}
 //
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 //    [super touchesBegan:touches withEvent:event];
@@ -278,7 +278,7 @@ static RNFrostedSidebar *rn_frostedMenu;
         _contentView.showsHorizontalScrollIndicator = NO;
         _contentView.showsVerticalScrollIndicator = NO;
         
-        _width = 120;
+        _width = 200;
         _animationDuration = 0.15f;
         _itemSize = CGSizeMake(_width/2, _width/2);
         _itemViews = [NSMutableArray array];

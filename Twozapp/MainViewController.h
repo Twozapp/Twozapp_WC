@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIView *viewName;
 @property (weak, nonatomic) IBOutlet UIView *viewBazi;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
-- (IBAction)actionMEnu:(id)sender;
+
+- (IBAction)actionSideMenu:(id)sender;
 
 @end

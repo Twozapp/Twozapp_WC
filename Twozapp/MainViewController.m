@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "RNFrostedSidebar.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<RNFrostedSidebarDelegate>
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 
 
@@ -41,17 +41,16 @@
 }
 
 
-- (IBAction)actionMEnu:(id)sender {
-    
+- (IBAction)actionSideMenu:(id)sender {
     
     NSArray *images = @[
-                        [UIImage imageNamed:@"user"],
-                        [UIImage imageNamed:@"panic2"],
-                        [UIImage imageNamed:@"my_trips"],
-                        [UIImage imageNamed:@"fare"],
-                        [UIImage imageNamed:@"about_us"],
-                        [UIImage imageNamed:@"feedback"],
-                        [UIImage imageNamed:@"rate_us"]];
+                        [UIImage imageNamed:@"imgSample.png"],
+                        [UIImage imageNamed:@"imgSample.png"],
+                        [UIImage imageNamed:@"imgSample.png"],
+                        [UIImage imageNamed:@"imgSample.png"],
+                        [UIImage imageNamed:@"imgSample.png"],
+                        [UIImage imageNamed:@"imgSample.png"],
+                        [UIImage imageNamed:@"imgSample.png"]];
     NSArray *colors = @[[UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
                         [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
                         [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
@@ -62,9 +61,9 @@
     
     // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *userName;
-        NSArray *labels;
+    NSArray *labels;
     if (userName.length >0) {
-        labels  = @[userName, @"", @"My Trips", @"Fare Chart", @"About Us", @"Feedback", @"Rate Us"];
+        labels  = @[@"", @"", @"My Trips", @"Fare Chart", @"About Us", @"Feedback", @"Rate Us"];
     }
     else{
         
@@ -76,7 +75,6 @@
     callout.delegate = self;
     //    callout.showFromRight = YES;
     [callout show];
+
 }
-
-
 @end

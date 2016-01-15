@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dey-bM-zKc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dey-bM-zKc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -730,7 +730,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="143" height="25"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o2j-tJ-Ykg" id="pu3-QF-W2V">
-                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="24.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjE-4G-ngS">
@@ -764,7 +764,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="143" height="25"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gmb-2I-a4N" id="bcN-QD-NTg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="24.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA4-qL-1M1">
@@ -798,7 +798,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="143" height="25"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l0X-Ud-WnB" id="CJm-2E-CQZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="24.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-EG-2My">
@@ -832,7 +832,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="414" height="25"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3gb-jf-YwR" id="et3-JO-dSG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="24.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li7-Ui-wDU">
@@ -1683,7 +1683,9 @@
                                             <constraint firstAttribute="height" constant="100" id="dEa-w5-87d"/>
                                             <constraint firstAttribute="width" constant="100" id="p0L-ic-8U0"/>
                                         </constraints>
-                                        <state key="normal" title="Close" image="notinterest"/>
+                                        <state key="normal" title="Close" image="notinterest">
+                                            <color key="titleColor" red="0.74901960784313726" green="0.058823529411764705" blue="0.19215686274509805" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ci1-Io-XuB">
                                         <rect key="frame" x="167" y="20" width="100" height="100"/>
@@ -1733,6 +1735,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="WJi-dh-Ur2">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Hh6-B7-e2n">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Y0R-SL-WfX">
+                                <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menubutton"/>
+                                <connections>
+                                    <action selector="actionSideMenu:" destination="lzh-JG-YnV" eventType="touchUpInside" id="B8K-4g-AiJ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="Jpp-Kd-n4b">
                             <rect key="frame" x="180" y="2" width="240" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1776,6 +1788,7 @@
         <image name="loginbackground" width="640" height="960"/>
         <image name="lookingfor" width="640" height="121"/>
         <image name="match" width="25" height="25"/>
+        <image name="menubutton" width="30" height="30"/>
         <image name="notinterest" width="100" height="100"/>
         <image name="profilebackpage" width="640" height="960"/>
         <image name="selectplus" width="60" height="60"/>

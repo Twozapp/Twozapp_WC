@@ -19,7 +19,7 @@
 @implementation ProfileTwoViewController
 {
     MBProgressHUD *hudProgress;
-
+    
 }
 @synthesize keys;
 
@@ -27,8 +27,8 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBar.userInteractionEnabled = NO;
-
-   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)];
     [self.view addGestureRecognizer:tap];
     keys = [[NSMutableArray alloc] init];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
@@ -72,16 +72,16 @@
     self.navigationItem.rightBarButtonItem = rightBarButton;
     
     [rightBarButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                             [UIFont fontWithName:@"Segoe Print" size:20.0], NSFontAttributeName,
-                                             [UIColor whiteColor], NSForegroundColorAttributeName,
-                                             nil]
-                                   forState:UIControlStateNormal];
+                                            [UIFont fontWithName:@"Segoe Print" size:20.0], NSFontAttributeName,
+                                            [UIColor whiteColor], NSForegroundColorAttributeName,
+                                            nil]
+                                  forState:UIControlStateNormal];
     
     UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"twozapp"]] style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.leftBarButtonItem = leftBarButton;
     
     
-   }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -115,15 +115,13 @@
     UILabel *lblTitle = (UILabel *)[cell viewWithTag:20];
     lblTitle.text = [keys objectAtIndex:indexPath.item];
     
-       return cell;
+    return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Adjust cell size for orientation
-    
     NSString *key = keys[indexPath.item];
     UIFont *myFont = [UIFont fontWithName:@"Segoe Print" size:17.0];
     
@@ -133,9 +131,6 @@
     CGRect rect = [attributedText boundingRectWithSize:(CGSize){CGFLOAT_MAX, 30}
                                                options:NSStringDrawingUsesLineFragmentOrigin
                                                context:nil];
-    
-    
-    
     return CGSizeMake(rect.size.width + 30, 30);
 }
 
@@ -189,18 +184,12 @@
                                                                          
                                                                          [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Success" withText:@"Successfully changed the password"];
                                                                          
-//                                                                         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
-//                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
+                                                                         
                                                                          
                                                                      }
                                                                      else
                                                                      {
                                                                          [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Failure" withText:@"Already registered"];
-                                                                         
-//                                                                         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
-//                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
                                                                      }
                                                                  }
                                                                  
@@ -213,12 +202,6 @@
         }
         
     }
-   
-    
-   
-
-
-    
 }
 
 - (IBAction)actionAddPhoto1:(id)sender {
@@ -229,7 +212,7 @@
                                                     otherButtonTitles:@"Take Photo", @"Photo Library", nil];
     actionSheet.tag = 1;
     [actionSheet showInView:self.view];
-
+    
 }
 
 - (IBAction)actionPhoto2:(id)sender {
@@ -294,19 +277,10 @@
         [picker dismissViewControllerAnimated:YES completion:NULL];
     }
     
-    
-   
-    
-    //[self.tableView reloadData];
-    
 }
 
-
-
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
-    
 }
 
 - (void)actionTap:(UITapGestureRecognizer *)tap
@@ -371,9 +345,6 @@
     return newLength <= 20;
 }
 
-
-
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [keys addObject:textField.text];
@@ -391,14 +362,13 @@
     NSIndexPath *indexPath = [_CollectionViewKeyword indexPathForCell:cell];
     [keys removeObjectAtIndex:indexPath.row];
     [_CollectionViewKeyword reloadData];
-    
 }
-
 
 - (AppDelegate *)appDelegate
 {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
+
 - (void)hudWasHidden:(MBProgressHUD *)hud {
     // Remove HUD from screen when the HUD was hidded
     [hudProgress removeFromSuperview];
