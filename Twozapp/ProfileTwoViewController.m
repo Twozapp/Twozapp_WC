@@ -28,7 +28,7 @@
     
     self.navigationController.navigationBar.userInteractionEnabled = NO;
 
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)];
+   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)];
     [self.view addGestureRecognizer:tap];
     keys = [[NSMutableArray alloc] init];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
