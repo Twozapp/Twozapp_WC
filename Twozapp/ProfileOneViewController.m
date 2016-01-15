@@ -28,8 +28,8 @@
     [self performSelector:@selector(stopLocationFetching) withObject:nil afterDelay:5.0];
     self.navigationController.navigationBar.userInteractionEnabled = NO;
 
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap)];
-    [self.view addGestureRecognizer:tap];
+    //UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap)];
+    //[self.view addGestureRecognizer:tap];
     
     _txtEmail.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"email"];
     [OnDeck sharedInstance].strName = _txtName.text;

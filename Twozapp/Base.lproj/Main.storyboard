@@ -439,7 +439,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdP-IZ-nDE">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-gN-34q">
                                         <rect key="frame" x="0.0" y="51" width="600" height="30"/>
@@ -493,7 +493,7 @@
                                             <constraint firstAttribute="width" constant="71" id="SnF-gY-w17"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SegoePrint" family="Segoe Print" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         <connections>
                                             <outlet property="delegate" destination="uPc-Pj-toe" id="0nC-Xn-Vmu"/>
                                         </connections>
@@ -505,7 +505,7 @@
                                             <constraint firstAttribute="height" constant="21" id="gfF-ST-h3d"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SegoePrint" family="Segoe Print" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         <connections>
                                             <outlet property="delegate" destination="uPc-Pj-toe" id="4ZV-0E-ob9"/>
                                         </connections>
