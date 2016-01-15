@@ -35,6 +35,7 @@
 
 
 - (IBAction)actionFacebook:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login

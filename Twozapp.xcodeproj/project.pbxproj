@@ -13,12 +13,12 @@
 		010D19511C46B50F0030B853 /* OnDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D19491C46B50F0030B853 /* OnDeck.m */; };
 		010D19521C46B50F0030B853 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D194B1C46B50F0030B853 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		010D19561C46B5D60030B853 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D19551C46B5D60030B853 /* WebServices.m */; };
+		0119D8171C48D01E006DFC76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0119D8161C48D01E006DFC76 /* Assets.xcassets */; };
 		0159EFA51C4151070038A1F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFA41C4151070038A1F9 /* main.m */; };
 		0159EFA81C4151070038A1F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFA71C4151070038A1F9 /* AppDelegate.m */; };
 		0159EFAB1C4151070038A1F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFAA1C4151070038A1F9 /* ViewController.m */; };
 		0159EFAE1C4151070038A1F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0159EFAC1C4151070038A1F9 /* Main.storyboard */; };
 		0159EFB11C4151070038A1F9 /* Twozapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFAF1C4151070038A1F9 /* Twozapp.xcdatamodeld */; };
-		0159EFB31C4151070038A1F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0159EFB21C4151070038A1F9 /* Assets.xcassets */; };
 		0159EFB61C4151070038A1F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0159EFB41C4151070038A1F9 /* LaunchScreen.storyboard */; };
 		0159EFC11C4151070038A1F9 /* TwozappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFC01C4151070038A1F9 /* TwozappTests.m */; };
 		0159EFCC1C4151070038A1F9 /* TwozappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFCB1C4151070038A1F9 /* TwozappUITests.m */; };
@@ -73,6 +73,7 @@
 		010D194B1C46B50F0030B853 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		010D19541C46B5D60030B853 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
 		010D19551C46B5D60030B853 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
+		0119D8161C48D01E006DFC76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0159EFA01C4151070038A1F9 /* Twozapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twozapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0159EFA41C4151070038A1F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0159EFA61C4151070038A1F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		0159EFAA1C4151070038A1F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0159EFAD1C4151070038A1F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0159EFB01C4151070038A1F9 /* Twozapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Twozapp.xcdatamodel; sourceTree = "<group>"; };
-		0159EFB21C4151070038A1F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0159EFB51C4151070038A1F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0159EFB71C4151070038A1F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0159EFBC1C4151070038A1F9 /* TwozappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwozappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,12 +223,12 @@
 				017A73DA1C45841E0045AB49 /* RNFrostedSidebar.m */,
 				01E188E61C421DE6000558F5 /* MatchesViewController.h */,
 				01E188E71C421DE6000558F5 /* MatchesViewController.m */,
+				0119D8161C48D01E006DFC76 /* Assets.xcassets */,
 				010D19411C46B4D80030B853 /* Modal */,
 				017A73CE1C4583F30045AB49 /* SideMenu */,
 				01E188E91C422267000558F5 /* imgSample.png */,
 				EAA7BB211C45190600153E05 /* Segoe_Print_Bold.ttf */,
 				EAA7BB221C45190600153E05 /* Segoe_Print.ttf */,
-				0159EFB21C4151070038A1F9 /* Assets.xcassets */,
 				0159EFB41C4151070038A1F9 /* LaunchScreen.storyboard */,
 				0159EFB71C4151070038A1F9 /* Info.plist */,
 				0159EFAF1C4151070038A1F9 /* Twozapp.xcdatamodeld */,
@@ -384,8 +384,8 @@
 				EAA7BB241C45192400153E05 /* Segoe_Print_Bold.ttf in Resources */,
 				EAA7BB231C45191E00153E05 /* Segoe_Print.ttf in Resources */,
 				0159EFB61C4151070038A1F9 /* LaunchScreen.storyboard in Resources */,
-				0159EFB31C4151070038A1F9 /* Assets.xcassets in Resources */,
 				0159EFAE1C4151070038A1F9 /* Main.storyboard in Resources */,
+				0119D8171C48D01E006DFC76 /* Assets.xcassets in Resources */,
 				01E188EA1C422267000558F5 /* imgSample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
