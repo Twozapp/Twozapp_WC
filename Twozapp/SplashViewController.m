@@ -35,6 +35,8 @@
 - (void)actionStop{
     [_activityIndicator stopAnimating];
     
+    //if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
+    
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"email"] isEqualToString:@""] && [[[NSUserDefaults standardUserDefaults] objectForKey:@"fb_id"] isEqualToString:@""]) {
         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"ConnectFacebookViewController"];
