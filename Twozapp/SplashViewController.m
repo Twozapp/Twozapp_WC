@@ -37,7 +37,7 @@
     
     //if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
     
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"email"] isEqualToString:@""] && [[[NSUserDefaults standardUserDefaults] objectForKey:@"fb_id"] isEqualToString:@""]) {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"email"] == nil && [[NSUserDefaults standardUserDefaults] objectForKey:@"fb_id"] == nil) {
         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"ConnectFacebookViewController"];
         [self presentViewController:profileTwo animated:YES completion:nil];
@@ -53,12 +53,12 @@
             } else {
                 
                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                hudProgress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-                hudProgress.delegate = self;
-                
-                hudProgress.mode = MBProgressHUDModeIndeterminate;
-                hudProgress.labelText = @"Loading";
-                hudProgress.dimBackground = YES;
+//                hudProgress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//                hudProgress.delegate = self;
+//                
+//                hudProgress.mode = MBProgressHUDModeIndeterminate;
+//                hudProgress.labelText = @"Loading";
+//                hudProgress.dimBackground = YES;
                 NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
                 
                 NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/login.php?fb_id=%@&email=%@&password=&latitude=%f&logitude=%f",[defaults stringForKey:@"fb_id"], [defaults stringForKey:@"email"],[self appDelegate].location.coordinate.latitude, [self appDelegate].location.coordinate.longitude];
