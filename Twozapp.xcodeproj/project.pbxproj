@@ -24,6 +24,8 @@
 		0159EFDB1C4154C60038A1F9 /* ConnectFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFDA1C4154C60038A1F9 /* ConnectFacebookViewController.m */; };
 		0159EFE11C415EC00038A1F9 /* ProfileOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFE01C415EC00038A1F9 /* ProfileOneViewController.m */; };
 		016CBFDC1C4A6CD900B05436 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CBFDB1C4A6CD900B05436 /* DetailViewController.m */; };
+		016CBFDF1C4A8EEF00B05436 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CBFDE1C4A8EEF00B05436 /* MyProfileViewController.m */; };
+		016CBFE21C4A9A2200B05436 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CBFE11C4A9A2200B05436 /* ChatListViewController.m */; };
 		017A73CD1C4582140045AB49 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73CC1C4582140045AB49 /* SplashViewController.m */; };
 		017A73D61C4584130045AB49 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73D11C4584130045AB49 /* MFSideMenuContainerViewController.m */; };
 		017A73D71C4584130045AB49 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73D31C4584130045AB49 /* MFSideMenuShadow.m */; };
@@ -98,6 +100,10 @@
 		0159EFE01C415EC00038A1F9 /* ProfileOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileOneViewController.m; sourceTree = "<group>"; };
 		016CBFDA1C4A6CD900B05436 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		016CBFDB1C4A6CD900B05436 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		016CBFDD1C4A8EEF00B05436 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		016CBFDE1C4A8EEF00B05436 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
+		016CBFE01C4A9A2200B05436 /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		016CBFE11C4A9A2200B05436 /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
 		017A73CB1C4582140045AB49 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		017A73CC1C4582140045AB49 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		017A73CF1C4584130045AB49 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
@@ -234,10 +240,14 @@
 				017A73E01C4584410045AB49 /* MainViewController.m */,
 				016CBFDA1C4A6CD900B05436 /* DetailViewController.h */,
 				016CBFDB1C4A6CD900B05436 /* DetailViewController.m */,
-				017A73D91C45841E0045AB49 /* RNFrostedSidebar.h */,
-				017A73DA1C45841E0045AB49 /* RNFrostedSidebar.m */,
+				016CBFDD1C4A8EEF00B05436 /* MyProfileViewController.h */,
+				016CBFDE1C4A8EEF00B05436 /* MyProfileViewController.m */,
 				01E188E61C421DE6000558F5 /* MatchesViewController.h */,
 				01E188E71C421DE6000558F5 /* MatchesViewController.m */,
+				016CBFE01C4A9A2200B05436 /* ChatListViewController.h */,
+				016CBFE11C4A9A2200B05436 /* ChatListViewController.m */,
+				017A73D91C45841E0045AB49 /* RNFrostedSidebar.h */,
+				017A73DA1C45841E0045AB49 /* RNFrostedSidebar.m */,
 				EA2FBFA81C497C610062CF2A /* Assets.xcassets */,
 				010D19411C46B4D80030B853 /* Modal */,
 				017A73CE1C4583F30045AB49 /* SideMenu */,
@@ -444,7 +454,9 @@
 				010D19521C46B50F0030B853 /* Reachability.m in Sources */,
 				0159EFB11C4151070038A1F9 /* Twozapp.xcdatamodeld in Sources */,
 				0159EFDB1C4154C60038A1F9 /* ConnectFacebookViewController.m in Sources */,
+				016CBFE21C4A9A2200B05436 /* ChatListViewController.m in Sources */,
 				EA09EE041C4845D500DAFA39 /* NetworkManager.m in Sources */,
+				016CBFDF1C4A8EEF00B05436 /* MyProfileViewController.m in Sources */,
 				017A73CD1C4582140045AB49 /* SplashViewController.m in Sources */,
 				0159EFA81C4151070038A1F9 /* AppDelegate.m in Sources */,
 				017A73E11C4584410045AB49 /* MainViewController.m in Sources */,

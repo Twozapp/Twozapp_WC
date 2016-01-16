@@ -31,6 +31,12 @@
     
     _imgviewProfile.image = [UIImage imageNamed:@"imgSample.png"];
     // Do any additional setup after loading the view.
+    
+    UIImage *navImage =  [[UIImage imageNamed:@"navigationbar"]
+                          resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+    
+    [[UINavigationBar appearance] setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:navImage forBarMetrics:UIBarMetricsCompact];
 }
 
 - (void)didReceiveMemoryWarning {
