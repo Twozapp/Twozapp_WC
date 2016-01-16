@@ -23,6 +23,7 @@
 		0159EFCC1C4151070038A1F9 /* TwozappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFCB1C4151070038A1F9 /* TwozappUITests.m */; };
 		0159EFDB1C4154C60038A1F9 /* ConnectFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFDA1C4154C60038A1F9 /* ConnectFacebookViewController.m */; };
 		0159EFE11C415EC00038A1F9 /* ProfileOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFE01C415EC00038A1F9 /* ProfileOneViewController.m */; };
+		016CBFDC1C4A6CD900B05436 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016CBFDB1C4A6CD900B05436 /* DetailViewController.m */; };
 		017A73CD1C4582140045AB49 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73CC1C4582140045AB49 /* SplashViewController.m */; };
 		017A73D61C4584130045AB49 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73D11C4584130045AB49 /* MFSideMenuContainerViewController.m */; };
 		017A73D71C4584130045AB49 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73D31C4584130045AB49 /* MFSideMenuShadow.m */; };
@@ -95,6 +96,8 @@
 		0159EFDA1C4154C60038A1F9 /* ConnectFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectFacebookViewController.m; sourceTree = "<group>"; };
 		0159EFDF1C415EC00038A1F9 /* ProfileOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileOneViewController.h; sourceTree = "<group>"; };
 		0159EFE01C415EC00038A1F9 /* ProfileOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileOneViewController.m; sourceTree = "<group>"; };
+		016CBFDA1C4A6CD900B05436 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		016CBFDB1C4A6CD900B05436 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		017A73CB1C4582140045AB49 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		017A73CC1C4582140045AB49 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		017A73CF1C4584130045AB49 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				01E10E061C441AAA00A11A12 /* ProfileTwoViewController.m */,
 				017A73DF1C4584410045AB49 /* MainViewController.h */,
 				017A73E01C4584410045AB49 /* MainViewController.m */,
+				016CBFDA1C4A6CD900B05436 /* DetailViewController.h */,
+				016CBFDB1C4A6CD900B05436 /* DetailViewController.m */,
 				017A73D91C45841E0045AB49 /* RNFrostedSidebar.h */,
 				017A73DA1C45841E0045AB49 /* RNFrostedSidebar.m */,
 				01E188E61C421DE6000558F5 /* MatchesViewController.h */,
@@ -430,6 +435,7 @@
 				010D19501C46B50F0030B853 /* NSString+MD5.m in Sources */,
 				01E804891C49720300C4557F /* User+CoreDataProperties.m in Sources */,
 				0159EFE11C415EC00038A1F9 /* ProfileOneViewController.m in Sources */,
+				016CBFDC1C4A6CD900B05436 /* DetailViewController.m in Sources */,
 				010D19561C46B5D60030B853 /* WebServices.m in Sources */,
 				010D194F1C46B50F0030B853 /* HelpDesk.m in Sources */,
 				017A73DB1C45841E0045AB49 /* RNFrostedSidebar.m in Sources */,

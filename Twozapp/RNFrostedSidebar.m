@@ -199,12 +199,12 @@
     [super layoutSubviews];
     
     CGFloat inset = self.bounds.size.height/2;
-    self.imageView.frame = CGRectMake(0, 0, inset, inset);
-    self.imageView.center = CGPointMake(inset, inset);
-    self.label.frame = CGRectMake(10, 70, inset+30, inset);
-    [self.label setFont:[UIFont fontWithName:@"System" size:13]];
+    self.imageView.frame = CGRectMake(10, inset/2+15, 30, 30);
+   // self.imageView.center = CGPointMake(10, 10);
+    self.label.frame = CGRectMake(50, inset/2+15, inset+30, 30);
+    [self.label setFont:[UIFont fontWithName:@"SegoePrint" size:17]];
     self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.textColor = [UIColor colorWithRed:233.0/255.0 green:165.0/255.0 blue:37.0/255.0 alpha:1.0];
+    self.label.textColor = [UIColor whiteColor];
    
 }
 
@@ -648,7 +648,7 @@ static RNFrostedSidebar *rn_frostedMenu;
 - (void)layoutItems {
     CGFloat leftPadding = (self.width - self.itemSize.width)/2;
     CGFloat topPadding = leftPadding;
-    CGFloat height = self.itemSize.height+50;
+    CGFloat height = self.itemSize.height;
     [self.itemViews enumerateObjectsUsingBlock:^(RNCalloutItemView *view, NSUInteger idx, BOOL *stop) {
         //CGRect frame = CGRectMake(leftPadding-25, topPadding*idx + self.itemSize.height*idx + topPadding, self.itemSize.width+50, self.itemSize.height+50);
         
