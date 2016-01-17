@@ -34,6 +34,9 @@
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    _btnClose1.hidden = YES;
+    _btnClose2.hidden = YES;
+    _btnClose3.hidden = YES;
     
     _imgView1.layer.cornerRadius = 5.0f;
     [_imgView1.layer setMasksToBounds:YES];
@@ -217,6 +220,34 @@
 
 - (IBAction)actionPhoto2:(id)sender {
     
+    
+    /*UIAlertController *alerSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+   // picker.view.tag = actionSheet.tag;
+    [alerSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+        // Cancel button tappped do nothing.
+        
+    }]];
+    
+    [alerSheet addAction:[UIAlertAction actionWithTitle:@"Take photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:picker animated:YES completion:NULL];
+    }]];
+    
+    [alerSheet addAction:[UIAlertAction actionWithTitle:@"Photo Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:picker animated:YES completion:NULL];
+        
+    }]];
+    
+    [self presentViewController:alerSheet animated:YES completion:nil];*/
+    
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
@@ -227,6 +258,9 @@
     
 }
 - (IBAction)actionAddPhoto2:(id)sender {
+    
+    
+    
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"

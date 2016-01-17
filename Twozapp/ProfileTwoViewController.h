@@ -24,6 +24,9 @@
 - (IBAction)actionSave:(id)sender;
 - (IBAction)actionAddPhoto1:(id)sender;
 - (IBAction)actionPhoto2:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnClose1;
+@property (weak, nonatomic) IBOutlet UIButton *btnClose2;
+@property (weak, nonatomic) IBOutlet UIButton *btnClose3;
 
 - (IBAction)actionAddPhoto2:(id)sender;
 @end
