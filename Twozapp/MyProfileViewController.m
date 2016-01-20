@@ -7,6 +7,7 @@
 //
 
 #import "MyProfileViewController.h"
+#import "UserDetails.h"
 
 @interface MyProfileViewController ()
 
@@ -22,6 +23,8 @@
     
     _viewName.layer.cornerRadius = 7.0f;
     [_viewName.layer setMasksToBounds:YES];
+    
+    _lblName.text = [NSString stringWithFormat:@"%@",[UserDetails sharedInstance].full_name];
     // Do any additional setup after loading the view.
 }
 
