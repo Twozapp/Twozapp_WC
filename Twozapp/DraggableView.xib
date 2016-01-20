@@ -179,10 +179,14 @@
                     <constraints>
                         <constraint firstItem="deR-H8-bo0" firstAttribute="leading" secondItem="FhC-Iw-tRS" secondAttribute="leading" constant="12" id="3lo-TR-zTH"/>
                         <constraint firstItem="fUg-ns-WCt" firstAttribute="top" secondItem="FhC-Iw-tRS" secondAttribute="top" id="4zi-fe-LQQ"/>
+                        <constraint firstAttribute="trailing" secondItem="fUg-ns-WCt" secondAttribute="trailing" id="5g6-e5-3b2"/>
+                        <constraint firstItem="fUg-ns-WCt" firstAttribute="leading" secondItem="FhC-Iw-tRS" secondAttribute="leading" id="9Dt-kg-bpD"/>
                         <constraint firstItem="fUg-ns-WCt" firstAttribute="leading" secondItem="FhC-Iw-tRS" secondAttribute="leading" id="Kyc-SV-usS"/>
+                        <constraint firstItem="fUg-ns-WCt" firstAttribute="top" secondItem="FhC-Iw-tRS" secondAttribute="top" id="N2z-dS-Y5m"/>
                         <constraint firstAttribute="trailing" secondItem="No3-mr-3U4" secondAttribute="trailing" id="UVj-px-bYk"/>
                         <constraint firstAttribute="trailing" secondItem="fUg-ns-WCt" secondAttribute="trailing" id="ZGe-wf-6rZ"/>
                         <constraint firstItem="No3-mr-3U4" firstAttribute="leading" secondItem="FhC-Iw-tRS" secondAttribute="leading" id="b5o-Ba-asF"/>
+                        <constraint firstAttribute="bottom" secondItem="fUg-ns-WCt" secondAttribute="bottom" id="djz-Dp-VRe"/>
                         <constraint firstAttribute="bottom" secondItem="No3-mr-3U4" secondAttribute="bottom" id="j1p-7v-zym"/>
                         <constraint firstItem="deR-H8-bo0" firstAttribute="top" secondItem="FhC-Iw-tRS" secondAttribute="top" constant="14" id="pkP-Ks-SVu"/>
                         <constraint firstAttribute="bottom" secondItem="fUg-ns-WCt" secondAttribute="bottom" id="wJd-Gr-Pfo"/>

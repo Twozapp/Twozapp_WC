@@ -19,6 +19,7 @@ static const float CARD_WIDTH = 290;
 @interface MainViewController ()<RNFrostedSidebarDelegate>{
     NSInteger cardsLoadedIndex; 
     NSMutableArray *loadedCards;
+    NSMutableArray *friendList;
 }
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 
@@ -31,6 +32,7 @@ static const float CARD_WIDTH = 290;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    friendList = [[NSMutableArray alloc] init];
     _imgViewProfilePic.layer.cornerRadius = 7.0f;
     [_imgViewProfilePic.layer setMasksToBounds:YES];
     _viewName.layer.cornerRadius = 7.0f;
@@ -48,7 +50,7 @@ static const float CARD_WIDTH = 290;
     loadedCards = [[NSMutableArray alloc] init];
     allCards = [[NSMutableArray alloc] init];
     cardsLoadedIndex = 0;
-    [self loadCards];
+    
     
     
     loadedCards = [[NSMutableArray alloc] init];
@@ -72,9 +74,9 @@ static const float CARD_WIDTH = 290;
                                                                      listfriends.frdId = [[arrResponse objectAtIndex:i] objectForKey:@"id"];
                                                                      listfriends.frdName = [[arrResponse objectAtIndex:i] objectForKey:@"full_name"];
                                                                      listfriends.fndImage = [[arrResponse objectAtIndex:i] objectForKey:@"image"];
-                                                                     [loadedCards addObject:listfriends];
+                                                                     [friendList addObject:listfriends];
                                                                  }
-                                                                 
+                                                                 [self loadCards];
                                                              }
                                                              else
                                                              {
@@ -177,12 +179,12 @@ static const float CARD_WIDTH = 290;
 //%%% loads all the cards and puts the first x in the "loaded cards" array
 -(void)loadCards
 {
-    if([exampleCardLabels count] > 0) {
+    if([friendList count] > 0) {
         NSInteger numLoadedCardsCap =(([exampleCardLabels count] > MAX_BUFFER_SIZE)?MAX_BUFFER_SIZE:[exampleCardLabels count]);
         //%%% if the buffer size is greater than the data size, there will be an array error, so this makes sure that doesn't happen
         
         //%%% loops through the exampleCardsLabels array to create a card for each label.  This should be customized by removing "exampleCardLabels" with your own array of data
-        for (int i = 0; i<[exampleCardLabels count]; i++) {
+        for (int i = 0; i<[friendList count]; i++) {
             DraggableView* newCard = [self createDraggableViewWithDataAtIndex:i];
             [newCard.btnLike addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
             newCard.btnLike.tag = i;
