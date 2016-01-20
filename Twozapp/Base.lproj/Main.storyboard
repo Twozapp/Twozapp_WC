@@ -95,6 +95,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="gtR-Jo-Wcu" id="NfS-Is-Vn2"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="tofacebook" id="WJP-bU-FlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSU-et-HNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,6 +183,7 @@
                             <constraint firstItem="bIT-7M-InY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="tRU-SV-S36"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="c2P-Sz-BMV"/>
                     <connections>
                         <outlet property="viewFacebook" destination="3mm-fe-jzz" id="L13-9o-Jev"/>
                     </connections>

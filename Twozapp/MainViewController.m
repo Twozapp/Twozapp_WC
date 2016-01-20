@@ -191,6 +191,10 @@ static const float CARD_WIDTH = 290;
             newCard.btnDislike.tag = i;
             [newCard.btnDislike addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
             [allCards addObject:newCard];
+            newCard.layer.cornerRadius = 5.0f;
+            newCard.layer.masksToBounds = YES;
+            
+
             
             if (i<numLoadedCardsCap) {
                 //%%% adds a small number of cards to be loaded

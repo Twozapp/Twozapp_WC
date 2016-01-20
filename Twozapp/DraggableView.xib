@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilebackpage" translatesAutoresizingMaskIntoConstraints="NO" id="FZE-gb-9Zd">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilebackpage" translatesAutoresizingMaskIntoConstraints="NO" id="FZE-gb-9Zd">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-Bc-3U4">
@@ -238,12 +238,16 @@
                 <constraint firstItem="lnX-Bc-3U4" firstAttribute="leading" secondItem="YNc-mu-tbn" secondAttribute="leading" constant="6" id="54p-HO-2EA"/>
                 <constraint firstItem="7G6-Im-sBx" firstAttribute="top" secondItem="lnX-Bc-3U4" secondAttribute="bottom" constant="17" id="7wR-zD-yTy"/>
                 <constraint firstAttribute="trailing" secondItem="FhC-Iw-tRS" secondAttribute="trailing" constant="10" id="8K7-y5-oKR"/>
+                <constraint firstAttribute="bottom" secondItem="FZE-gb-9Zd" secondAttribute="bottom" id="Ai5-SF-6Ps"/>
                 <constraint firstItem="7G6-Im-sBx" firstAttribute="centerX" secondItem="YNc-mu-tbn" secondAttribute="centerX" id="RNn-Mk-qeP"/>
                 <constraint firstAttribute="trailing" secondItem="lnX-Bc-3U4" secondAttribute="trailing" constant="6" id="Rgy-a5-1h0"/>
                 <constraint firstItem="lnX-Bc-3U4" firstAttribute="top" secondItem="FhC-Iw-tRS" secondAttribute="bottom" constant="7" id="V2C-qb-Yfw"/>
                 <constraint firstItem="7G6-Im-sBx" firstAttribute="top" secondItem="lnX-Bc-3U4" secondAttribute="bottom" constant="17" id="Vpk-Wh-TEa"/>
                 <constraint firstItem="FhC-Iw-tRS" firstAttribute="leading" secondItem="YNc-mu-tbn" secondAttribute="leading" constant="10" id="jX1-ay-dfV"/>
+                <constraint firstItem="FZE-gb-9Zd" firstAttribute="top" secondItem="YNc-mu-tbn" secondAttribute="top" id="jzz-CW-Klu"/>
+                <constraint firstAttribute="trailing" secondItem="FZE-gb-9Zd" secondAttribute="trailing" id="otA-cC-YcT"/>
                 <constraint firstItem="lnX-Bc-3U4" firstAttribute="top" secondItem="FhC-Iw-tRS" secondAttribute="bottom" constant="7" id="qdD-7g-EUH"/>
+                <constraint firstItem="FZE-gb-9Zd" firstAttribute="leading" secondItem="YNc-mu-tbn" secondAttribute="leading" id="yN9-wN-a9K"/>
                 <constraint firstAttribute="bottom" secondItem="7G6-Im-sBx" secondAttribute="bottom" constant="8" id="yr3-gA-VhA"/>
             </constraints>
             <connections>

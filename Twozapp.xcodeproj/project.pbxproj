@@ -44,6 +44,7 @@
 		EA09EE041C4845D500DAFA39 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA09EE031C4845D500DAFA39 /* NetworkManager.m */; };
 		EA09EE071C4845FE00DAFA39 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EA09EE061C4845FE00DAFA39 /* MBProgressHUD.m */; };
 		EA09EE091C48484900DAFA39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA09EE081C48484900DAFA39 /* CoreLocation.framework */; };
+		EA11151A1C5003F3008A553D /* UserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1115191C5003F3008A553D /* UserDetails.m */; };
 		EA2FBFA91C497C610062CF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2FBFA81C497C610062CF2A /* Assets.xcassets */; };
 		EA32311F1C4D532900ADDBF7 /* DraggableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA32311E1C4D532900ADDBF7 /* DraggableView.xib */; };
 		EAA7BB231C45191E00153E05 /* Segoe_Print.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA7BB221C45190600153E05 /* Segoe_Print.ttf */; };
@@ -143,6 +144,8 @@
 		EA09EE051C4845FE00DAFA39 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		EA09EE061C4845FE00DAFA39 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		EA09EE081C48484900DAFA39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EA1115181C5003F3008A553D /* UserDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetails.h; sourceTree = "<group>"; };
+		EA1115191C5003F3008A553D /* UserDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetails.m; sourceTree = "<group>"; };
 		EA2FBFA81C497C610062CF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA32311E1C4D532900ADDBF7 /* DraggableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableView.xib; sourceTree = "<group>"; };
 		EAA7BB211C45190600153E05 /* Segoe_Print_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Segoe_Print_Bold.ttf; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				01E804861C49720300C4557F /* User+CoreDataProperties.m */,
 				01E804871C49720300C4557F /* User.h */,
 				01E804881C49720300C4557F /* User.m */,
+				EA1115181C5003F3008A553D /* UserDetails.h */,
+				EA1115191C5003F3008A553D /* UserDetails.m */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				016CBFDC1C4A6CD900B05436 /* DetailViewController.m in Sources */,
 				010D19561C46B5D60030B853 /* WebServices.m in Sources */,
 				010D194F1C46B50F0030B853 /* HelpDesk.m in Sources */,
+				EA11151A1C5003F3008A553D /* UserDetails.m in Sources */,
 				017A73DB1C45841E0045AB49 /* RNFrostedSidebar.m in Sources */,
 				017A73D71C4584130045AB49 /* MFSideMenuShadow.m in Sources */,
 				017A73D81C4584130045AB49 /* UIViewController+MFSideMenuAdditions.m in Sources */,
