@@ -178,7 +178,6 @@ static const float CARD_WIDTH = 290;
     }
 }
 
-#warning include own action here!
 //%%% action called when the card goes to the right.
 // This should be customized with your own action
 -(void)cardSwipedRight:(UIView *)card
