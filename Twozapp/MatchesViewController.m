@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     arrayMatches = [[NSMutableArray alloc] init];
+    
+    self.navigationController.navigationBarHidden = NO;
     //infowebtechsolutions.com/demo/twzapp/match.php?user_id=11
     NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/match.php?user_id=1"];
     

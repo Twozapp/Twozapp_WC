@@ -11,6 +11,7 @@
 #import "DraggableView.h"
 #import "NetworkManager.h"
 #import "UserFriends.h"
+#import "MatchesViewController.h"
 
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
 static const float CARD_HEIGHT = 386; //%%% height of the draggable card
@@ -144,6 +145,63 @@ static const float CARD_WIDTH = 290;
     }];
  
     
+}
+
+
+#pragma mark - RNFrostedSidebarDelegate
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
+    
+    if (index == 0) {
+        [sidebar dismissAnimated:YES completion:nil];
+        
+        
+        
+    }
+    if (index == 1) {
+        [sidebar dismissAnimated:YES completion:nil];
+        
+        
+    }
+    
+    if (index == 2){
+        [sidebar dismissAnimated:YES completion:^{
+           
+        }];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        MatchesViewController *matches = [story instantiateViewControllerWithIdentifier:@"MatchesViewController"];
+        [self.navigationController pushViewController:matches animated:YES];
+        
+        
+    }
+    if (index == 3) {
+        [sidebar dismissAnimated:YES completion:nil];
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *gsvc = [storyboard instantiateViewControllerWithIdentifier:@"MyProfileViewController"];
+        
+        [self.navigationController pushViewController:gsvc animated:YES];
+        
+        
+    }
+    if (index == 4) {
+        [sidebar dismissAnimated:YES completion:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *gsvc = [storyboard instantiateViewControllerWithIdentifier:@"AboutUsViewController"];
+        
+        [self.navigationController pushViewController:gsvc animated:YES];
+        
+    }
+    
+}
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
+    if (itemEnabled) {
+        [self.optionIndices addIndex:index];
+    }
+    else {
+        [self.optionIndices removeIndex:index];
+    }
 }
 
 - (IBAction)actionIntrested:(id)sender {
