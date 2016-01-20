@@ -1547,8 +1547,8 @@
                                                 <view tag="30" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZT-S5-8dn">
                                                     <rect key="frame" x="0.0" y="120" width="150" height="30"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lavinia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-Bx-kuX">
-                                                            <rect key="frame" x="8" y="4" width="50" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="40" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lavinia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-Bx-kuX">
+                                                            <rect key="frame" x="8" y="4" width="57" height="21"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                                             <color key="textColor" red="0.61568627450980395" green="0.0" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
