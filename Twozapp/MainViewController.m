@@ -9,6 +9,8 @@
 #import "MainViewController.h"
 #import "RNFrostedSidebar.h"
 #import "DraggableView.h"
+#import "NetworkManager.h"
+#import "UserFriends.h"
 
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
 static const float CARD_HEIGHT = 386; //%%% height of the draggable card
@@ -49,6 +51,39 @@ static const float CARD_WIDTH = 290;
     [self loadCards];
     
     
+    loadedCards = [[NSMutableArray alloc] init];
+    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/near_friends.php?user_id=1"];
+    
+    [[NetworkManager sharedManager] getvalueFromServerForGetterURL:urlPath
+                                                 completionHandler:^(NSError *error, NSDictionary *result) {
+                                                     if(error) {
+                                                         NSLog(@"error : %@", [error description]);
+                                                     } else {
+                                                         // This is the expected result
+                                                         NSLog(@"result : %@", result);
+                                                         if (result.count >0) {
+                                                             if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
+                                                                 
+                                                                 NSMutableArray *arrResponse = [[NSMutableArray alloc] init];
+                                                                 
+                                                                 arrResponse = result[@"response"][@"User Profile"];
+                                                                 for (int i = 0; i<[arrResponse count]; i++) {
+                                                                     UserFriends *listfriends = [[UserFriends alloc] init];
+                                                                     listfriends.frdId = [[arrResponse objectAtIndex:i] objectForKey:@"id"];
+                                                                     listfriends.frdName = [[arrResponse objectAtIndex:i] objectForKey:@"full_name"];
+                                                                     listfriends.fndImage = [[arrResponse objectAtIndex:i] objectForKey:@"image"];
+                                                                     [loadedCards addObject:listfriends];
+                                                                 }
+                                                                 
+                                                             }
+                                                             else
+                                                             {
+                                                                 
+                                                             }
+                                                         }
+                                                         
+                                                     }
+                                                                                                     }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -191,7 +226,6 @@ static const float CARD_WIDTH = 290;
     }
 }
 
-#warning include own action here!
 //%%% action called when the card goes to the right.
 // This should be customized with your own action
 -(void)cardSwipedRight:(UIView *)card
