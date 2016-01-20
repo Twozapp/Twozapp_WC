@@ -45,10 +45,14 @@
 
 @property (weak) id <DraggableViewDelegate> delegate;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnLike;
+@property (weak, nonatomic) IBOutlet UIButton *btnDislike;
 @property (nonatomic, strong)UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic)CGPoint originalPoint;
 @property (nonatomic,strong)OverlayView* overlayView;
 @property (nonatomic,strong)UILabel* information; //%%% a placeholder for any card-specific information
+
+-(void)setupView;
 
 -(void)leftClickAction;
 -(void)rightClickAction;

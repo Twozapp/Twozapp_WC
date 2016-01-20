@@ -42,6 +42,12 @@ static const float CARD_WIDTH = 290;
     [[UINavigationBar appearance] setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setBackgroundImage:navImage forBarMetrics:UIBarMetricsCompact];
     
+    exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", @"first",@"second",@"third",@"fourth",@"last", @"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
+    loadedCards = [[NSMutableArray alloc] init];
+    allCards = [[NSMutableArray alloc] init];
+    cardsLoadedIndex = 0;
+    [self loadCards];
+    
     
 }
 
@@ -124,8 +130,11 @@ static const float CARD_WIDTH = 290;
 
 -(DraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index
 {
-    DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - _viewProfile.frame.size.width)/2, (self.view.frame.size.height - _viewProfile.frame.size.height)/2, _viewProfile.frame.size.width, _viewProfile.frame.size.height)];
-    draggableView.information.text = [exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
+    DraggableView *draggableView = [[[NSBundle mainBundle] loadNibNamed:@"DraggableView" owner:self options:nil] lastObject];
+    draggableView.frame = CGRectMake(0, 0, _viewProfile.frame.size.width, _viewProfile.frame.size.height);
+    [draggableView setupView];
+ //   DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - _viewProfile.frame.size.width)/2, (self.view.frame.size.height - _viewProfile.frame.size.height)/2, _viewProfile.frame.size.width, _viewProfile.frame.size.height)];
+   // draggableView.information.text = [exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
     draggableView.delegate = self;
     return draggableView;
 }
@@ -140,6 +149,10 @@ static const float CARD_WIDTH = 290;
         //%%% loops through the exampleCardsLabels array to create a card for each label.  This should be customized by removing "exampleCardLabels" with your own array of data
         for (int i = 0; i<[exampleCardLabels count]; i++) {
             DraggableView* newCard = [self createDraggableViewWithDataAtIndex:i];
+            [newCard.btnLike addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
+            newCard.btnLike.tag = i;
+            newCard.btnDislike.tag = i;
+            [newCard.btnDislike addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
             [allCards addObject:newCard];
             
             if (i<numLoadedCardsCap) {

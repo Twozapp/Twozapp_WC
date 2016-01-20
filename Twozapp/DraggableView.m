@@ -36,30 +36,33 @@
         [self setupView];
         
 #warning placeholder stuff, replace with card-specific information {
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
-        information.text = @"no info given";
-        [information setTextAlignment:NSTextAlignmentCenter];
-        information.textColor = [UIColor blackColor];
-        
-        self.backgroundColor = [UIColor whiteColor];
+//        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+//        information.text = @"no info given";
+//        [information setTextAlignment:NSTextAlignmentCenter];
+//        information.textColor = [UIColor blackColor];
+//        
+//        self.backgroundColor = [UIColor whiteColor];
 #warning placeholder stuff, replace with card-specific information }
         
         
         
-        panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
-        
-        [self addGestureRecognizer:panGestureRecognizer];
-        [self addSubview:information];
-        
-        overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
-        overlayView.alpha = 0;
-        [self addSubview:overlayView];
-    }
+            }
     return self;
 }
 
+
 -(void)setupView
 {
+    
+    panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
+    
+    [self addGestureRecognizer:panGestureRecognizer];
+    //[self addSubview:information];
+    
+    overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
+    overlayView.alpha = 0;
+    [self addSubview:overlayView];
+
     self.layer.cornerRadius = 4;
     self.layer.shadowRadius = 3;
     self.layer.shadowOpacity = 0.2;
