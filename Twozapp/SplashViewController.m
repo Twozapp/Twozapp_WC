@@ -51,6 +51,7 @@
             NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
             if (networkStatus == NotReachable) {
                 [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Failure" withText:@"No Internet connection Available."];
+                 [self performSegueWithIdentifier:@"tofacebook" sender:nil];
             } else {
                 
                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -67,6 +68,7 @@
                 [[NetworkManager sharedManager] getvalueFromServerForGetterURL:urlPath
                                                              completionHandler:^(NSError *error, NSDictionary *result) {
                                                                  if(error) {
+                                                                      [self performSegueWithIdentifier:@"tofacebook" sender:nil];
                                                                      NSLog(@"error : %@", [error description]);
                                                                  } else {
                                                                      // This is the expected result
@@ -75,7 +77,7 @@
                                                                          if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
                                                                            
                                                                              if (result[@"response"][@"User Profile"] != nil) {
-                                                                                 [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Success" withText:@"Successfully Logged in"];
+                                                                                 [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Failure" withText:@"Successfully Logged in"];
                                                                                  
                                                                                  UserDetails *userDetails = [UserDetails sharedInstance];
                                                                                  userDetails.chinese_element = result[@"response"][@"User Profile"][0][@"chinese_element"];
@@ -103,7 +105,7 @@
                                                                                  userDetails.zodiac_animal = result[@"response"][@"User Profile"][0][@"zodiac_animal"];
                                                                                
                                                                                  UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-                                                                                 UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
+                                                                                 UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"ContentViewControllerNavi"];
                                                                                  [self presentViewController:profileTwo animated:YES completion:nil];
                                                                                  
                                                                              }
@@ -125,6 +127,11 @@
                                                                              //                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
                                                                              //                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
                                                                          }
+                                                                     }
+                                                                     else
+                                                                     {
+                                                                         
+                                                                          [self performSegueWithIdentifier:@"tofacebook" sender:nil];
                                                                      }
                                                                      
                                                                  }

@@ -11,6 +11,7 @@
 #import "NetworkManager.h"
 #import "MBProgressHUD.h"
 #import "AppDelegate.h"
+#import "UserDetails.h"
 
 @interface ProfileTwoViewController ()< UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, MBProgressHUDDelegate>
 
@@ -173,9 +174,10 @@
             hudProgress.labelText = @"Loading";
             hudProgress.dimBackground = YES;
             NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-            NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/signup.php?full_name=%@&email=%@&password=&gender=%@&description=%@&latitude=%f&logitude=%f&fb_id=%@&chinese_element=water_wood&zodiac_animal=metal_monkey",[OnDeck sharedInstance].strName, [OnDeck sharedInstance].strEmail, [OnDeck sharedInstance].strGender, _txtViewTellus.text, [self appDelegate].location.coordinate.latitude, [self appDelegate].location.coordinate.longitude, [defaults stringForKey:@"fb_id"]];
             
-            [[NetworkManager sharedManager] getvalueFromServerForGetterURL:urlPath
+            NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/signup.php?full_name=%@&email=%@&password=&gender=%@&description=%@&latitude=%f&logitude=%f&fb_id=%@&chinese_element=water_wood&zodiac_animal=metal_monkey",[OnDeck sharedInstance].strName, [OnDeck sharedInstance].strEmail, [OnDeck sharedInstance].strGender, _txtViewTellus.text, [self appDelegate].location.coordinate.latitude, [self appDelegate].location.coordinate.longitude, [defaults stringForKey:@"fb_id"]];
+            NSString *finalURLPath = [urlPath stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+            [[NetworkManager sharedManager] getvalueFromServerForGetterURL:finalURLPath
                                                          completionHandler:^(NSError *error, NSDictionary *result) {
                                                              if(error) {
                                                                  NSLog(@"error : %@", [error description]);
@@ -183,23 +185,89 @@
                                                                  // This is the expected result
                                                                  NSLog(@"result : %@", result);
                                                                  if (result.count >0) {
+                                                                     
                                                                      if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
+                                                                     
+                                                                         [defaults setObject:[OnDeck sharedInstance].strEmail forKey:@"email"];
                                                                          
-                                                                         [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Success" withText:@"Successfully changed the password"];
-                                                                         
-                                                                         
-                                                                         
-                                                                     }
-                                                                     else
-                                                                     {
-                                                                         [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Failure" withText:@"Already registered"];
+                                                                      NSString  *loginPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/login.php?fb_id=%@&email=%@&password=&latitude=%f&logitude=%f",[defaults stringForKey:@"fb_id"], [defaults stringForKey:@"email"],[self appDelegate].location.coordinate.latitude, [self appDelegate].location.coordinate.longitude];
+                                                                     [[NetworkManager sharedManager] getvalueFromServerForGetterURL:loginPath
+                                                                                                                  completionHandler:^(NSError *error, NSDictionary *result) {
+                                                                                                                      if(error) {
+                                                                                                                          NSLog(@"error : %@", [error description]);
+                                                                                                                      } else {
+                                                                                                                          // This is the expected result
+                                                                                                                          NSLog(@"result : %@", result);
+                                                                                                                          if (result.count >0) {
+                                                                                                                              if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
+                                                                                                                                  
+                                                                                                                                  if (result[@"response"][@"User Profile"] != nil) {
+                                                                                                                                      [[SlideAlertiOS7 sharedSlideAlert] showSlideAlertViewWithStatus:@"Failure" withText:@"Successfully Logged in"];
+                                                                                                                                      
+                                                                                                                                      UserDetails *userDetails = [UserDetails sharedInstance];
+                                                                                                                                      userDetails.chinese_element = result[@"response"][@"User Profile"][0][@"chinese_element"];
+                                                                                                                                      userDetails.date = result[@"response"][@"User Profile"][0][@"date"];
+                                                                                                                                      userDetails.day_column_one = result[@"response"][@"User Profile"][0][@"day_column_one"];
+                                                                                                                                      userDetails.day_column_two = result[@"response"][@"User Profile"][0][@"day_column_two"];
+                                                                                                                                      userDetails.descriptions = result[@"response"][@"User Profile"][0][@"description"];
+                                                                                                                                      userDetails.email = result[@"response"][@"User Profile"][0][@"email"];
+                                                                                                                                      userDetails.fb_id = result[@"response"][@"User Profile"][0][@"fb_id"];
+                                                                                                                                      userDetails.full_name = result[@"response"][@"User Profile"][0][@"full_name"];
+                                                                                                                                      userDetails.gender = result[@"response"][@"User Profile"][0][@"gender"];
+                                                                                                                                      userDetails.hr_mm_column_one = result[@"response"][@"User Profile"][0][@"hr_mm_column_one"];
+                                                                                                                                      userDetails.hr_mm_column_two = result[@"response"][@"User Profile"][0][@"hr_mm_column_two"];
+                                                                                                                                      userDetails.user_id = result[@"response"][@"User Profile"][0][@"id"];
+                                                                                                                                      userDetails.last_online = result[@"response"][@"User Profile"][0][@"last_online"];
+                                                                                                                                      userDetails.latitude = result[@"response"][@"User Profile"][0][@"latitude"];
+                                                                                                                                      userDetails.logitude = result[@"response"][@"User Profile"][0][@"logitude"];
+                                                                                                                                      userDetails.modified_date = result[@"response"][@"User Profile"][0][@"modified_date"];
+                                                                                                                                      userDetails.month_column_one = result[@"response"][@"User Profile"][0][@"month_column_one"];
+                                                                                                                                      userDetails.month_column_two = result[@"response"][@"User Profile"][0][@"month_column_two"];
+                                                                                                                                      userDetails.password = result[@"response"][@"User Profile"][0][@"password"];
+                                                                                                                                      userDetails.status = result[@"response"][@"User Profile"][0][@"status"];
+                                                                                                                                      userDetails.year_column_one = result[@"response"][@"User Profile"][0][@"year_column_one"];
+                                                                                                                                      userDetails.year_column_two = result[@"response"][@"User Profile"][0][@"year_column_two"];
+                                                                                                                                      userDetails.zodiac_animal = result[@"response"][@"User Profile"][0][@"zodiac_animal"];
+                                                                                                                                      
+                                                                                                                                      UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                                                                                                                                      UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"ContentViewControllerNavi"];
+                                                                                                                                      [self presentViewController:profileTwo animated:YES completion:nil];
+                                                                                                                                      
+                                                                                                                                  }
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  //                                                                         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                                                                                                                                  //                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
+                                                                                                                                  //                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
+                                                                                                                                  
+                                                                                                                              }
+                                                                                                                              else
+                                                                                                                              {
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  //                                                                         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                                                                                                                                  //                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
+                                                                                                                                  //                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
+                                                                                                                              }
+                                                                                                                          }
+                                                                                                                          else
+                                                                                                                          {
+                                                                                                                              
+                                                                                                                              
+                                                                                                                          }
+                                                                                                                          
+                                                                                                                      }
+                                                                                                                      
+                                                                                                                      [self hudWasHidden:hudProgress];
+                                                                                                                  }];
                                                                      }
                                                                  }
                                                                  
                                                              }
-                                                             UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-                                                             UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
-                                                             [self presentViewController:profileTwo animated:YES completion:nil];
+                                                             
                                                              [self hudWasHidden:hudProgress];
                                                          }];
         }

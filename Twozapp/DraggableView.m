@@ -28,6 +28,7 @@
 @synthesize panGestureRecognizer;
 @synthesize information;
 @synthesize overlayView;
+@synthesize userFriend;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -59,14 +60,23 @@
     [self addGestureRecognizer:panGestureRecognizer];
     //[self addSubview:information];
     
-    overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
+    overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.viewProfileDetails.bounds.size.width/2-150, 50, 100, 100)];
+    overlayView.backgroundColor = [UIColor clearColor];
     overlayView.alpha = 0;
+    
     [self addSubview:overlayView];
 
     self.layer.cornerRadius = 4;
     self.layer.shadowRadius = 3;
     self.layer.shadowOpacity = 0.2;
     self.layer.shadowOffset = CGSizeMake(1, 1);
+    
+    self.viewBazi.layer.cornerRadius = 5.0f;
+    self.viewName.layer.cornerRadius = 5.0f;
+    self.viewProfileDetails.layer.cornerRadius = 5.0f;
+    self.viewProfileDetails.layer.masksToBounds = YES;
+
+    
 }
 
 /*

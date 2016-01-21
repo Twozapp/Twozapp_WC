@@ -33,6 +33,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OverlayView.h"
+#import "UserFriends.h"
 
 @protocol DraggableViewDelegate <NSObject>
 
@@ -47,10 +48,17 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnLike;
 @property (weak, nonatomic) IBOutlet UIButton *btnDislike;
+@property (weak, nonatomic) IBOutlet UIImageView *imgProfile;
+@property (weak, nonatomic) IBOutlet UIView *viewName;
+@property (weak, nonatomic) IBOutlet UIView *viewBazi;
+@property (weak, nonatomic) IBOutlet UIView *viewProfileDetails;
+@property (weak, nonatomic) IBOutlet UIImageView *imgOnline;
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (nonatomic, strong)UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic)CGPoint originalPoint;
 @property (nonatomic,strong)OverlayView* overlayView;
 @property (nonatomic,strong)UILabel* information; //%%% a placeholder for any card-specific information
+@property (nonatomic, strong) UserFriends *userFriend;
 
 -(void)setupView;
 

@@ -124,7 +124,7 @@
                                     <rect key="frame" x="15" y="14" width="91" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="XbD-2G-svf"/>
-                                        <constraint firstAttribute="width" constant="91" id="vTL-Y8-kxK"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="91" id="vTL-Y8-kxK"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="SegoePrint" family="Segoe Print" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -253,6 +253,12 @@
             <connections>
                 <outlet property="btnDislike" destination="jao-X3-2Br" id="6Sa-gg-SWr"/>
                 <outlet property="btnLike" destination="dKc-o7-ieQ" id="Og3-8t-WR4"/>
+                <outlet property="imgOnline" destination="deR-H8-bo0" id="oep-iU-Qgo"/>
+                <outlet property="imgProfile" destination="fUg-ns-WCt" id="rFZ-DC-gi7"/>
+                <outlet property="lblName" destination="AYy-Hf-gbW" id="w3g-Iq-B7e"/>
+                <outlet property="viewBazi" destination="lnX-Bc-3U4" id="PZq-CW-4Cd"/>
+                <outlet property="viewName" destination="No3-mr-3U4" id="FKw-x1-AHk"/>
+                <outlet property="viewProfileDetails" destination="FhC-Iw-tRS" id="VtJ-fD-wle"/>
             </connections>
         </view>
     </objects>

@@ -45,6 +45,7 @@
 		EA09EE071C4845FE00DAFA39 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EA09EE061C4845FE00DAFA39 /* MBProgressHUD.m */; };
 		EA09EE091C48484900DAFA39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA09EE081C48484900DAFA39 /* CoreLocation.framework */; };
 		EA11151A1C5003F3008A553D /* UserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1115191C5003F3008A553D /* UserDetails.m */; };
+		EA11151D1C501129008A553D /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA11151C1C501129008A553D /* ContentViewController.m */; };
 		EA2FBFA91C497C610062CF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2FBFA81C497C610062CF2A /* Assets.xcassets */; };
 		EA32311F1C4D532900ADDBF7 /* DraggableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA32311E1C4D532900ADDBF7 /* DraggableView.xib */; };
 		EAA7BB231C45191E00153E05 /* Segoe_Print.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA7BB221C45190600153E05 /* Segoe_Print.ttf */; };
@@ -146,6 +147,8 @@
 		EA09EE081C48484900DAFA39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA1115181C5003F3008A553D /* UserDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetails.h; sourceTree = "<group>"; };
 		EA1115191C5003F3008A553D /* UserDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetails.m; sourceTree = "<group>"; };
+		EA11151B1C501129008A553D /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		EA11151C1C501129008A553D /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		EA2FBFA81C497C610062CF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA32311E1C4D532900ADDBF7 /* DraggableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableView.xib; sourceTree = "<group>"; };
 		EAA7BB211C45190600153E05 /* Segoe_Print_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Segoe_Print_Bold.ttf; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				01E10E061C441AAA00A11A12 /* ProfileTwoViewController.m */,
 				017A73DF1C4584410045AB49 /* MainViewController.h */,
 				017A73E01C4584410045AB49 /* MainViewController.m */,
+				EA11151B1C501129008A553D /* ContentViewController.h */,
+				EA11151C1C501129008A553D /* ContentViewController.m */,
 				016CBFDA1C4A6CD900B05436 /* DetailViewController.h */,
 				016CBFDB1C4A6CD900B05436 /* DetailViewController.m */,
 				016CBFDD1C4A8EEF00B05436 /* MyProfileViewController.h */,
@@ -483,6 +488,7 @@
 				0159EFB11C4151070038A1F9 /* Twozapp.xcdatamodeld in Sources */,
 				0159EFDB1C4154C60038A1F9 /* ConnectFacebookViewController.m in Sources */,
 				016CBFE21C4A9A2200B05436 /* ChatListViewController.m in Sources */,
+				EA11151D1C501129008A553D /* ContentViewController.m in Sources */,
 				EA09EE041C4845D500DAFA39 /* NetworkManager.m in Sources */,
 				016CBFDF1C4A8EEF00B05436 /* MyProfileViewController.m in Sources */,
 				017A73CD1C4582140045AB49 /* SplashViewController.m in Sources */,
@@ -586,7 +592,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "1f629cc1-6cb5-48dd-83f4-4e3818a0763d";
+				PROVISIONING_PROFILE = "fe4c8c1a-f1aa-4e0c-9566-22b6b14de343";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -624,7 +630,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "1f629cc1-6cb5-48dd-83f4-4e3818a0763d";
+				PROVISIONING_PROFILE = "fe4c8c1a-f1aa-4e0c-9566-22b6b14de343";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -647,7 +653,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domainname.Twozapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f629cc1-6cb5-48dd-83f4-4e3818a0763d";
+				PROVISIONING_PROFILE = "fe4c8c1a-f1aa-4e0c-9566-22b6b14de343";
 			};
 			name = Debug;
 		};
@@ -668,7 +674,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domainname.Twozapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f629cc1-6cb5-48dd-83f4-4e3818a0763d";
+				PROVISIONING_PROFILE = "fe4c8c1a-f1aa-4e0c-9566-22b6b14de343";
 			};
 			name = Release;
 		};

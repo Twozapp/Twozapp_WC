@@ -12,6 +12,8 @@
 #import "NetworkManager.h"
 #import "UserFriends.h"
 #import "MatchesViewController.h"
+#import "OverlayView.h"
+#import "UserDetails.h"
 
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
 static const float CARD_HEIGHT = 386; //%%% height of the draggable card
@@ -21,6 +23,7 @@ static const float CARD_WIDTH = 290;
     NSInteger cardsLoadedIndex; 
     NSMutableArray *loadedCards;
     NSMutableArray *friendList;
+    OverlayView *overlayView;
 }
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 
@@ -113,13 +116,8 @@ static const float CARD_WIDTH = 290;
     // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *userName;
     NSArray *labels;
-    if (userName.length >0) {
-      //  labels  = @[@"", @"", @"My Trips", @"Fare Chart", @"About Us", @"Feedback", @"Rate Us"];
-    }
-    else{
-        
-        labels = @[@"Priyanka",@"Chats", @"Matches", @"Profile", @"My Bazi"];
-    }
+    
+        labels = @[[UserDetails sharedInstance].full_name,@"Chats", @"Matches", @"Profile", @"My Bazi"];
     
     RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors textLabels:labels];
     //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
@@ -148,61 +146,7 @@ static const float CARD_WIDTH = 290;
 }
 
 
-#pragma mark - RNFrostedSidebarDelegate
 
-- (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
-    
-    if (index == 0) {
-        [sidebar dismissAnimated:YES completion:nil];
-        
-        
-        
-    }
-    if (index == 1) {
-        [sidebar dismissAnimated:YES completion:nil];
-        
-        
-    }
-    
-    if (index == 2){
-        [sidebar dismissAnimated:YES completion:^{
-           
-        }];
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        MatchesViewController *matches = [story instantiateViewControllerWithIdentifier:@"MatchesViewController"];
-        [self.navigationController pushViewController:matches animated:YES];
-        
-        
-    }
-    if (index == 3) {
-        [sidebar dismissAnimated:YES completion:nil];
-        
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *gsvc = [storyboard instantiateViewControllerWithIdentifier:@"MyProfileViewController"];
-        
-        [self.navigationController pushViewController:gsvc animated:YES];
-        
-        
-    }
-    if (index == 4) {
-        [sidebar dismissAnimated:YES completion:nil];
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *gsvc = [storyboard instantiateViewControllerWithIdentifier:@"AboutUsViewController"];
-        
-        [self.navigationController pushViewController:gsvc animated:YES];
-        
-    }
-    
-}
-
-- (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
-    if (itemEnabled) {
-        [self.optionIndices addIndex:index];
-    }
-    else {
-        [self.optionIndices removeIndex:index];
-    }
-}
 
 - (IBAction)actionIntrested:(id)sender {
     
@@ -251,7 +195,8 @@ static const float CARD_WIDTH = 290;
             [allCards addObject:newCard];
             newCard.layer.cornerRadius = 5.0f;
             newCard.layer.masksToBounds = YES;
-            
+            newCard.userFriend = friendList[i];
+            newCard.lblName = [NSString stringWithFormat:@"%@, 24",newCard.userFriend.frdName];
 
             
             if (i<numLoadedCardsCap) {
@@ -271,6 +216,7 @@ static const float CARD_WIDTH = 290;
             cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
         }
     }
+    
 }
 
 #warning include own action here!
@@ -279,15 +225,20 @@ static const float CARD_WIDTH = 290;
 -(void)cardSwipedLeft:(UIView *)card;
 {
     //do whatever you want with the card that was swiped
-    //    DraggableView *c = (DraggableView *)card;
-    
+        DraggableView *c = (DraggableView *)card;
+    UserFriends *friend = c.userFriend;
+    [self sendRequestwithStatus:@"1" forFriendId:friend.frdId];
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     
     if (cardsLoadedIndex < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
         [loadedCards addObject:[allCards objectAtIndex:cardsLoadedIndex]];
         cardsLoadedIndex++;//%%% loaded a card, so have to increment count
         [_viewProfile insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
+        
+        
+        
     }
+    
 }
 
 //%%% action called when the card goes to the right.
@@ -295,14 +246,16 @@ static const float CARD_WIDTH = 290;
 -(void)cardSwipedRight:(UIView *)card
 {
     //do whatever you want with the card that was swiped
-    //    DraggableView *c = (DraggableView *)card;
-    
+        DraggableView *c = (DraggableView *)card;
+    UserFriends *friend = c.userFriend;
+    [self sendRequestwithStatus:@"0" forFriendId:friend.frdId];
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     
     if (cardsLoadedIndex < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
         [loadedCards addObject:[allCards objectAtIndex:cardsLoadedIndex]];
         cardsLoadedIndex++;//%%% loaded a card, so have to increment count
         [_viewProfile insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
+        
     }
     
 }
@@ -316,6 +269,8 @@ static const float CARD_WIDTH = 290;
         dragView.overlayView.alpha = 1;
     }];
     [dragView rightClickAction];
+    UserFriends *friend = dragView.userFriend;
+    [self sendRequestwithStatus:@"0" forFriendId:friend.frdId];
 }
 
 //%%% when you hit the left button, this is called and substitutes the swipe
@@ -327,6 +282,35 @@ static const float CARD_WIDTH = 290;
         dragView.overlayView.alpha = 1;
     }];
     [dragView leftClickAction];
+     UserFriends *friend = dragView.userFriend;
+     [self sendRequestwithStatus:@"1" forFriendId:friend.frdId];
+
+}
+
+- (void)sendRequestwithStatus:(NSString *)status forFriendId:(NSString *)friendID
+{
+    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/accept.php?from_id=%@1&to_id=%@&status=%@",friendID, [UserDetails sharedInstance].user_id, status];
+    
+    [[NetworkManager sharedManager] getvalueFromServerForGetterURL:urlPath
+                                                 completionHandler:^(NSError *error, NSDictionary *result) {
+                                                     if(error) {
+                                                         NSLog(@"error : %@", [error description]);
+                                                     } else {
+                                                         // This is the expected result
+                                                         NSLog(@"result : %@", result);
+                                                         if (result.count >0) {
+                                                             if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
+                                                                 
+                                                                
+                                                             }
+                                                             else
+                                                             {
+                                                                 
+                                                             }
+                                                         }
+                                                         
+                                                     }
+                                                 }];
 }
 
 
