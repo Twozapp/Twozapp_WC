@@ -133,14 +133,7 @@
                                                                                       
                                                                                   }
                                                                                   
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  //                                                                         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-                                                                                  //                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
-                                                                                  //                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
-                                                                                  
+  
                                                                               }
                                                                               else
                                                                               {
