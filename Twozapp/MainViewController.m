@@ -196,7 +196,7 @@ static const float CARD_WIDTH = 290;
             newCard.layer.cornerRadius = 5.0f;
             newCard.layer.masksToBounds = YES;
             newCard.userFriend = friendList[i];
-            newCard.lblName = [NSString stringWithFormat:@"%@, 24",newCard.userFriend.frdName];
+            newCard.lblName.text = [NSString stringWithFormat:@"%@, 24",newCard.userFriend.frdName];
 
             
             if (i<numLoadedCardsCap) {
