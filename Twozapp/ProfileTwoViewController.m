@@ -275,6 +275,8 @@
     }
 }
 
+
+
 - (IBAction)actionAddPhoto1:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self

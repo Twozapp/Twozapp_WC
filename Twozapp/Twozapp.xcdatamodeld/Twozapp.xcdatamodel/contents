@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Chat" syncable="YES">
+        <attribute name="datetime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="friendid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagedata" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senderid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chathistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatSummary" inverseName="chats" inverseEntity="ChatSummary" syncable="YES"/>
+    </entity>
+    <entity name="ChatSummary" syncable="YES">
+        <attribute name="datetime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="friend_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagedata" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastmessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chats" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Chat" inverseName="chathistory" inverseEntity="Chat" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fbId" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,5 +29,7 @@
     </entity>
     <elements>
         <element name="User" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="ChatSummary" positionX="-63" positionY="27" width="128" height="150"/>
+        <element name="Chat" positionX="-54" positionY="63" width="128" height="165"/>
     </elements>
 </model>
