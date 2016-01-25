@@ -137,7 +137,14 @@
     }
     if (index == 4) {
         [sidebar dismissAnimated:YES completion:nil];
+        for (UIView *view  in self.view.subviews) {
+            [view removeFromSuperview];
+        }
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *gsvc = [storyboard instantiateViewControllerWithIdentifier:@"MyBaziViewController"];
         
+        [self addChildViewController:gsvc];
+        [self.view addSubview:gsvc.view];
     }
     
 }

@@ -32,6 +32,7 @@
 		017A73D81C4584130045AB49 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73D51C4584130045AB49 /* UIViewController+MFSideMenuAdditions.m */; };
 		017A73DB1C45841E0045AB49 /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73DA1C45841E0045AB49 /* RNFrostedSidebar.m */; };
 		017A73E11C4584410045AB49 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A73E01C4584410045AB49 /* MainViewController.m */; };
+		01E052FB1C513FB3005ED4E0 /* MyBaziViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E052FA1C513FB3005ED4E0 /* MyBaziViewController.m */; };
 		01E10E071C441AAA00A11A12 /* ProfileTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E10E061C441AAA00A11A12 /* ProfileTwoViewController.m */; };
 		01E188E81C421DE6000558F5 /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E188E71C421DE6000558F5 /* MatchesViewController.m */; };
 		01E188EA1C422267000558F5 /* imgSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E188E91C422267000558F5 /* imgSample.png */; };
@@ -123,6 +124,8 @@
 		017A73DA1C45841E0045AB49 /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
 		017A73DF1C4584410045AB49 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		017A73E01C4584410045AB49 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		01E052F91C513FB3005ED4E0 /* MyBaziViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaziViewController.h; sourceTree = "<group>"; };
+		01E052FA1C513FB3005ED4E0 /* MyBaziViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaziViewController.m; sourceTree = "<group>"; };
 		01E10E051C441AAA00A11A12 /* ProfileTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTwoViewController.h; sourceTree = "<group>"; };
 		01E10E061C441AAA00A11A12 /* ProfileTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTwoViewController.m; sourceTree = "<group>"; };
 		01E188E61C421DE6000558F5 /* MatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				016CBFDE1C4A8EEF00B05436 /* MyProfileViewController.m */,
 				01E188E61C421DE6000558F5 /* MatchesViewController.h */,
 				01E188E71C421DE6000558F5 /* MatchesViewController.m */,
+				01E052F91C513FB3005ED4E0 /* MyBaziViewController.h */,
+				01E052FA1C513FB3005ED4E0 /* MyBaziViewController.m */,
 				01E701C31C4FEA4200DFE1D9 /* UserFriends.h */,
 				01E701C41C4FEA4200DFE1D9 /* UserFriends.m */,
 				016CBFE01C4A9A2200B05436 /* ChatListViewController.h */,
@@ -467,6 +472,7 @@
 			files = (
 				01E8048A1C49720300C4557F /* User.m in Sources */,
 				01F6C3981C4D46A0001724A0 /* OverlayView.m in Sources */,
+				01E052FB1C513FB3005ED4E0 /* MyBaziViewController.m in Sources */,
 				01E10E071C441AAA00A11A12 /* ProfileTwoViewController.m in Sources */,
 				010D194E1C46B50F0030B853 /* Base64.m in Sources */,
 				EA09EE071C4845FE00DAFA39 /* MBProgressHUD.m in Sources */,
