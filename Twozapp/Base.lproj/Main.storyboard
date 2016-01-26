@@ -1229,8 +1229,8 @@
                                             <constraint firstAttribute="height" constant="135" id="FzO-Vk-k7Q"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tell us more about yourself:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r16-jN-pmc">
-                                        <rect key="frame" x="192" y="18" width="216" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us more about yourself:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r16-jN-pmc">
+                                        <rect key="frame" x="195" y="18" width="210" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="iCf-ct-r7U"/>
                                         </constraints>
@@ -1673,11 +1673,11 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yang  Earth" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j56-ZB-srZ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yang  Earth" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j56-ZB-srZ">
                                                 <rect key="frame" x="26" y="39" width="75" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="0cp-rZ-kAo"/>
-                                                    <constraint firstAttribute="width" constant="58" id="N5e-92-1JF"/>
+                                                    <constraint firstAttribute="width" constant="75" id="N5e-92-1JF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1796,7 +1796,7 @@
                                             <constraint firstItem="sBo-jW-zzT" firstAttribute="centerX" secondItem="mct-dS-BVg" secondAttribute="centerX" id="f0c-Ul-fLx"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zik-E3-ZHP">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zik-E3-ZHP">
                                         <rect key="frame" x="263" y="8" width="126" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="丙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQX-NR-EoA">
@@ -1911,11 +1911,11 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yin       Wood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-1g-AGm">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yin       Wood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-1g-AGm">
                                                 <rect key="frame" x="30" y="39" width="66" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="juI-YO-WHL"/>
-                                                    <constraint firstAttribute="width" constant="58" id="lY4-Xv-3gg"/>
+                                                    <constraint firstAttribute="width" constant="66" id="lY4-Xv-3gg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1969,7 +1969,7 @@
                                     <constraint firstItem="mct-dS-BVg" firstAttribute="top" secondItem="L0K-F7-hYr" secondAttribute="bottom" constant="8" id="SqZ-aJ-8e2"/>
                                     <constraint firstItem="bnS-40-5zd" firstAttribute="leading" secondItem="RWN-6I-f7v" secondAttribute="trailing" constant="5" id="UZv-Ei-WIo"/>
                                     <constraint firstItem="TKI-as-CZY" firstAttribute="top" secondItem="Zik-E3-ZHP" secondAttribute="bottom" constant="8" id="V6V-RJ-jkJ"/>
-                                    <constraint firstItem="Zik-E3-ZHP" firstAttribute="leading" secondItem="bqj-MS-mOj" secondAttribute="trailing" constant="8" id="Vnz-a9-POp"/>
+                                    <constraint firstItem="Zik-E3-ZHP" firstAttribute="leading" secondItem="bqj-MS-mOj" secondAttribute="trailing" constant="6" id="Vnz-a9-POp"/>
                                     <constraint firstItem="iaV-1y-vbF" firstAttribute="width" secondItem="kUt-Zb-aJw" secondAttribute="width" id="aFK-0l-WSu"/>
                                     <constraint firstAttribute="bottom" secondItem="az4-LN-A6O" secondAttribute="bottom" id="b9A-EO-Vdj"/>
                                     <constraint firstItem="L0K-F7-hYr" firstAttribute="leading" secondItem="Zik-E3-ZHP" secondAttribute="trailing" constant="3" id="cqv-Om-GVw"/>
@@ -1987,7 +1987,7 @@
                                     <constraint firstAttribute="bottom" secondItem="bnS-40-5zd" secondAttribute="bottom" id="kYF-db-Pqg"/>
                                     <constraint firstItem="iaV-1y-vbF" firstAttribute="top" secondItem="kUt-Zb-aJw" secondAttribute="bottom" constant="8" id="kdD-yq-H3h"/>
                                     <constraint firstItem="TKI-as-CZY" firstAttribute="height" secondItem="kUt-Zb-aJw" secondAttribute="height" id="mZf-T4-IJS"/>
-                                    <constraint firstItem="Zik-E3-ZHP" firstAttribute="leading" secondItem="bqj-MS-mOj" secondAttribute="trailing" constant="8" id="oQt-y5-DSx"/>
+                                    <constraint firstItem="Zik-E3-ZHP" firstAttribute="leading" secondItem="bqj-MS-mOj" secondAttribute="trailing" constant="6" id="oQt-y5-DSx"/>
                                     <constraint firstItem="bnS-40-5zd" firstAttribute="top" secondItem="mct-dS-BVg" secondAttribute="bottom" constant="6" id="pbq-mq-0xe"/>
                                     <constraint firstAttribute="bottom" secondItem="ii0-Zp-3bD" secondAttribute="bottom" constant="1" id="taS-44-noM"/>
                                     <constraint firstItem="Zik-E3-ZHP" firstAttribute="height" secondItem="kUt-Zb-aJw" secondAttribute="height" id="w3G-cN-WdT"/>
@@ -1997,6 +1997,12 @@
                                     <constraint firstItem="bqj-MS-mOj" firstAttribute="top" secondItem="u46-9V-DSD" secondAttribute="top" constant="8" id="zfJ-Pu-84Y"/>
                                     <constraint firstItem="mct-dS-BVg" firstAttribute="width" secondItem="kUt-Zb-aJw" secondAttribute="width" id="zxM-Zc-x17"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AJp-iU-6yt"/>
+                                        <exclude reference="cqv-Om-GVw"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
