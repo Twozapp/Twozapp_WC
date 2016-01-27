@@ -16,5 +16,6 @@
 @synthesize fndGender;
 @synthesize fndDescription;
 @synthesize fndEmail;
+@synthesize fndBaziCount;
 
 @end

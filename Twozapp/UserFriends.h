@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSString *fndGender;
 @property (nonatomic, strong) NSString *fndDescription;
 @property (nonatomic, strong) NSString *fndEmail;
+@property (nonatomic, strong) NSString *fndBaziCount;
 
 @end

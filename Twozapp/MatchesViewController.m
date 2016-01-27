@@ -47,6 +47,7 @@
                                                                                                                                           userFriends.fndDescription = [[arrResponse objectAtIndex:i] objectForKey:@"description"];
                                                                                                                                           userFriends.fndGender = [[arrResponse objectAtIndex:i] objectForKey:@"gender"];
                                                                      userFriends.frdId = [[arrResponse objectAtIndex:i] objectForKey:@"id"];
+                                                                      userFriends.fndBaziCount = [[arrResponse objectAtIndex:i] objectForKey:@"buzi_rating"];
                                                                      
                                                                      
                                                                      
@@ -105,6 +106,39 @@
     UIImageView *imgOnline = (UIImageView *)[cell viewWithTag:20];
     imgOnline.layer.cornerRadius = 5.0;
     [imgOnline.layer setMasksToBounds:YES];
+    
+    UIImageView *imgViewBazi1 = (UIImageView *)[cell viewWithTag:1];
+     UIImageView *imgViewBazi2 = (UIImageView *)[cell viewWithTag:2];
+     UIImageView *imgViewBazi3 = (UIImageView *)[cell viewWithTag:3];
+     UIImageView *imgViewBazi4 = (UIImageView *)[cell viewWithTag:4];
+     UIImageView *imgViewBazi5 = (UIImageView *)[cell viewWithTag:5];
+    
+    if ([userFriends.fndBaziCount integerValue] <= 2) {
+        imgViewBazi5.image = [UIImage imageNamed:@"star"];
+    }
+    else if ([userFriends.fndBaziCount integerValue] > 2 && [userFriends.fndBaziCount integerValue] <=4){
+        imgViewBazi5.image = [UIImage imageNamed:@"star"];
+        imgViewBazi4.image = [UIImage imageNamed:@"star"];
+    }
+    else if ([userFriends.fndBaziCount integerValue] > 4 && [userFriends.fndBaziCount integerValue] <=6){
+        imgViewBazi5.image = [UIImage imageNamed:@"star"];
+        imgViewBazi4.image = [UIImage imageNamed:@"star"];
+        imgViewBazi3.image = [UIImage imageNamed:@"star"];
+    }
+    else if ([userFriends.fndBaziCount integerValue] > 6 && [userFriends.fndBaziCount integerValue] <=8){
+        imgViewBazi5.image = [UIImage imageNamed:@"star"];
+        imgViewBazi4.image = [UIImage imageNamed:@"star"];
+        imgViewBazi3.image = [UIImage imageNamed:@"star"];
+        imgViewBazi2.image = [UIImage imageNamed:@"star"];
+    }
+    else
+    {
+        imgViewBazi5.image = [UIImage imageNamed:@"star"];
+        imgViewBazi4.image = [UIImage imageNamed:@"star"];
+        imgViewBazi3.image = [UIImage imageNamed:@"star"];
+        imgViewBazi2.image = [UIImage imageNamed:@"star"];
+        imgViewBazi1.image = [UIImage imageNamed:@"star"];
+    }
     
         return cell;
 }
