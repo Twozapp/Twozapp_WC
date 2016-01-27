@@ -2606,7 +2606,7 @@
         <!--Detail View Controller-->
         <scene sceneID="uQq-J5-F70">
             <objects>
-                <viewController id="qdw-kz-8fF" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="qdw-kz-8fF" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="anc-Gg-Nsp"/>
                         <viewControllerLayoutGuide type="bottom" id="qfa-TG-0Dz"/>
@@ -2616,10 +2616,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilebackpage" translatesAutoresizingMaskIntoConstraints="NO" id="xKF-aq-eu7">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X79-c8-Apd">
-                                <rect key="frame" x="10" y="74" width="580" height="345"/>
+                                <rect key="frame" x="10" y="30" width="580" height="390"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ue-30-0P0">
                                         <rect key="frame" x="0.0" y="295" width="580" height="50"/>
@@ -2779,8 +2779,8 @@
                                     <constraint firstAttribute="trailing" secondItem="MLk-Fx-NFr" secondAttribute="trailing" id="Bsj-Tb-2Nf"/>
                                     <constraint firstItem="7zC-Dl-oR2" firstAttribute="leading" secondItem="X79-c8-Apd" secondAttribute="leading" id="DKp-pP-fg2"/>
                                     <constraint firstItem="6ue-30-0P0" firstAttribute="leading" secondItem="X79-c8-Apd" secondAttribute="leading" id="GSa-pW-DPy"/>
-                                    <constraint firstAttribute="bottom" secondItem="6ue-30-0P0" secondAttribute="bottom" id="L9W-HP-z9E"/>
-                                    <constraint firstAttribute="bottom" secondItem="MLk-Fx-NFr" secondAttribute="bottom" id="Tkd-i9-PY4"/>
+                                    <constraint firstAttribute="bottom" secondItem="6ue-30-0P0" secondAttribute="bottom" constant="45" id="L9W-HP-z9E"/>
+                                    <constraint firstAttribute="bottom" secondItem="MLk-Fx-NFr" secondAttribute="bottom" constant="45" id="Tkd-i9-PY4"/>
                                     <constraint firstItem="MLk-Fx-NFr" firstAttribute="leading" secondItem="X79-c8-Apd" secondAttribute="leading" id="fz8-ew-Ysm"/>
                                     <constraint firstAttribute="trailing" secondItem="6ue-30-0P0" secondAttribute="trailing" id="mFf-mY-dHf"/>
                                     <constraint firstItem="MLk-Fx-NFr" firstAttribute="top" secondItem="7zC-Dl-oR2" secondAttribute="bottom" id="o8a-em-KQo"/>
@@ -2870,7 +2870,7 @@
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UUD-65-xzY">
                                         <rect key="frame" x="0.0" y="40" width="580" height="71"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="71" id="Bqu-bo-wt4"/>
                                         </constraints>
@@ -2973,14 +2973,14 @@
                         <constraints>
                             <constraint firstItem="X79-c8-Apd" firstAttribute="leading" secondItem="gdv-NT-i70" secondAttribute="leading" constant="10" id="0L8-ep-JGd"/>
                             <constraint firstItem="xKF-aq-eu7" firstAttribute="leading" secondItem="gdv-NT-i70" secondAttribute="leading" id="2JL-yB-ee0"/>
-                            <constraint firstItem="xKF-aq-eu7" firstAttribute="top" secondItem="anc-Gg-Nsp" secondAttribute="bottom" constant="44" id="Dit-Rc-RUN"/>
-                            <constraint firstItem="OYb-CN-odr" firstAttribute="top" secondItem="X79-c8-Apd" secondAttribute="bottom" constant="10" id="F7U-EN-1iC"/>
+                            <constraint firstItem="xKF-aq-eu7" firstAttribute="top" secondItem="anc-Gg-Nsp" secondAttribute="bottom" id="Dit-Rc-RUN"/>
+                            <constraint firstItem="OYb-CN-odr" firstAttribute="top" secondItem="X79-c8-Apd" secondAttribute="bottom" constant="9" id="F7U-EN-1iC"/>
                             <constraint firstAttribute="trailing" secondItem="xKF-aq-eu7" secondAttribute="trailing" id="FC7-N9-kMx"/>
                             <constraint firstAttribute="trailing" secondItem="OYb-CN-odr" secondAttribute="trailing" constant="10" id="Fab-hs-bKI"/>
                             <constraint firstAttribute="trailing" secondItem="X79-c8-Apd" secondAttribute="trailing" constant="10" id="ISv-mn-YIX"/>
                             <constraint firstItem="qfa-TG-0Dz" firstAttribute="top" secondItem="xKF-aq-eu7" secondAttribute="bottom" id="Pt0-id-xPG"/>
-                            <constraint firstItem="OYb-CN-odr" firstAttribute="top" secondItem="X79-c8-Apd" secondAttribute="bottom" constant="10" id="dXG-dU-h4d"/>
-                            <constraint firstItem="X79-c8-Apd" firstAttribute="top" secondItem="anc-Gg-Nsp" secondAttribute="bottom" constant="54" id="qGr-f1-Mq6"/>
+                            <constraint firstItem="OYb-CN-odr" firstAttribute="top" secondItem="X79-c8-Apd" secondAttribute="bottom" constant="9" id="dXG-dU-h4d"/>
+                            <constraint firstItem="X79-c8-Apd" firstAttribute="top" secondItem="anc-Gg-Nsp" secondAttribute="bottom" constant="10" id="qGr-f1-Mq6"/>
                             <constraint firstItem="qfa-TG-0Dz" firstAttribute="top" secondItem="OYb-CN-odr" secondAttribute="bottom" constant="10" id="zdl-Xh-mik"/>
                             <constraint firstItem="OYb-CN-odr" firstAttribute="leading" secondItem="gdv-NT-i70" secondAttribute="leading" constant="10" id="zun-fM-o5u"/>
                         </constraints>
