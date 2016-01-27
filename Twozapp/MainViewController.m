@@ -116,8 +116,8 @@ static const float CARD_WIDTH = 290;
 {
     // Dictionary that holds post parameters. You can set your post parameters that your server accepts or programmed to accept.
     NSMutableDictionary* _params = [[NSMutableDictionary alloc] init];
-   // [_params setObject:[UserDetails sharedInstance].user_id forKey:@"profile_id"];
-   // [_params setObject:@"profile_picture1" forKey:@"profile_picture1"];
+    [_params setObject:[UserDetails sharedInstance].user_id forKey:@"profile_id"];
+    [_params setObject:@"profile_picture1" forKey:@"profile_picture1"];
     
     // the boundary string : a random string, that will not repeat in post data, to separate post data fields.
     NSString *BoundaryConstant = @"----------V2ymHFg03ehbqgZCaKO6jy";

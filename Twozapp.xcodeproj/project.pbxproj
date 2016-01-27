@@ -53,6 +53,10 @@
 		EAA7BB241C45192400153E05 /* Segoe_Print_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAA7BB211C45190600153E05 /* Segoe_Print_Bold.ttf */; };
 		EAA7BB2A1C458CA700153E05 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA7BB281C458CA700153E05 /* FBSDKCoreKit.framework */; };
 		EAA7BB2B1C458CA700153E05 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA7BB291C458CA700153E05 /* FBSDKLoginKit.framework */; };
+		EAB339841C57F2AB00B4F816 /* Chat+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3397D1C57F2AB00B4F816 /* Chat+CoreDataProperties.m */; };
+		EAB339851C57F2AB00B4F816 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3397F1C57F2AB00B4F816 /* Chat.m */; };
+		EAB339861C57F2AB00B4F816 /* ChatSummary+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB339811C57F2AB00B4F816 /* ChatSummary+CoreDataProperties.m */; };
+		EAB339871C57F2AB00B4F816 /* ChatSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB339831C57F2AB00B4F816 /* ChatSummary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +162,14 @@
 		EAA7BB221C45190600153E05 /* Segoe_Print.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Segoe_Print.ttf; sourceTree = "<group>"; };
 		EAA7BB281C458CA700153E05 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		EAA7BB291C458CA700153E05 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		EAB3397C1C57F2AB00B4F816 /* Chat+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Chat+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EAB3397D1C57F2AB00B4F816 /* Chat+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Chat+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EAB3397E1C57F2AB00B4F816 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
+		EAB3397F1C57F2AB00B4F816 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
+		EAB339801C57F2AB00B4F816 /* ChatSummary+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatSummary+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EAB339811C57F2AB00B4F816 /* ChatSummary+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatSummary+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EAB339821C57F2AB00B4F816 /* ChatSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSummary.h; sourceTree = "<group>"; };
+		EAB339831C57F2AB00B4F816 /* ChatSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSummary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +203,14 @@
 		010D19411C46B4D80030B853 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				EAB3397C1C57F2AB00B4F816 /* Chat+CoreDataProperties.h */,
+				EAB3397D1C57F2AB00B4F816 /* Chat+CoreDataProperties.m */,
+				EAB3397E1C57F2AB00B4F816 /* Chat.h */,
+				EAB3397F1C57F2AB00B4F816 /* Chat.m */,
+				EAB339801C57F2AB00B4F816 /* ChatSummary+CoreDataProperties.h */,
+				EAB339811C57F2AB00B4F816 /* ChatSummary+CoreDataProperties.m */,
+				EAB339821C57F2AB00B4F816 /* ChatSummary.h */,
+				EAB339831C57F2AB00B4F816 /* ChatSummary.m */,
 				01F6C3931C4D46A0001724A0 /* DraggableView.h */,
 				01F6C3941C4D46A0001724A0 /* DraggableView.m */,
 				01F6C3951C4D46A0001724A0 /* OverlayView.h */,
@@ -483,8 +503,10 @@
 				0159EFE11C415EC00038A1F9 /* ProfileOneViewController.m in Sources */,
 				016CBFDC1C4A6CD900B05436 /* DetailViewController.m in Sources */,
 				010D19561C46B5D60030B853 /* WebServices.m in Sources */,
+				EAB339851C57F2AB00B4F816 /* Chat.m in Sources */,
 				010D194F1C46B50F0030B853 /* HelpDesk.m in Sources */,
 				EA11151A1C5003F3008A553D /* UserDetails.m in Sources */,
+				EAB339841C57F2AB00B4F816 /* Chat+CoreDataProperties.m in Sources */,
 				017A73DB1C45841E0045AB49 /* RNFrostedSidebar.m in Sources */,
 				017A73D71C4584130045AB49 /* MFSideMenuShadow.m in Sources */,
 				017A73D81C4584130045AB49 /* UIViewController+MFSideMenuAdditions.m in Sources */,
@@ -500,7 +522,9 @@
 				017A73CD1C4582140045AB49 /* SplashViewController.m in Sources */,
 				0159EFA81C4151070038A1F9 /* AppDelegate.m in Sources */,
 				017A73E11C4584410045AB49 /* MainViewController.m in Sources */,
+				EAB339861C57F2AB00B4F816 /* ChatSummary+CoreDataProperties.m in Sources */,
 				010D19511C46B50F0030B853 /* OnDeck.m in Sources */,
+				EAB339871C57F2AB00B4F816 /* ChatSummary.m in Sources */,
 				01E188E81C421DE6000558F5 /* MatchesViewController.m in Sources */,
 				0159EFA51C4151070038A1F9 /* main.m in Sources */,
 				EA09EE011C48428D00DAFA39 /* SlideAlertiOS7.m in Sources */,
