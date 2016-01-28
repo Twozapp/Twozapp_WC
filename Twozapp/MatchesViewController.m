@@ -9,6 +9,7 @@
 #import "MatchesViewController.h"
 #import "NetworkManager.h"
 #import "UserFriends.h"
+#import "UserDetails.h"
 
 @interface MatchesViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
@@ -24,7 +25,7 @@
     
     self.navigationController.navigationBarHidden = NO;
     //infowebtechsolutions.com/demo/twzapp/match.php?user_id=11
-    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/match.php?user_id=1"];
+    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/match.php?user_id=%@",[UserDetails sharedInstance].user_id];
     
     [[NetworkManager sharedManager] getvalueFromServerForGetterURL:urlPath
                                                  completionHandler:^(NSError *error, NSDictionary *result) {
@@ -37,7 +38,7 @@
                                                              if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
                                                                  NSMutableArray *arrResponse = [[NSMutableArray alloc] init];
                                                                  arrResponse = result[@"response"][@"Details"];
-                                                                 for (int i = 0; i< [arrResponse count]; i++) {
+                                                                 for (int i = 0; i<= [arrResponse count]; i++) {
                                                                      UserFriends *userFriends = [[UserFriends alloc] init];
                                                                      userFriends.fndImage = [[arrResponse objectAtIndex:i] objectForKey:@"profile_picture1"];
                                                                      userFriends.fndEmail = [[arrResponse objectAtIndex:i] objectForKey:@"email"];

@@ -8,6 +8,8 @@
 
 #import "MyProfileViewController.h"
 #import "UserDetails.h"
+#import "NetworkManager.h"
+#import "UserDetails.h"
 
 @interface MyProfileViewController ()
 
@@ -17,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self performSelector:@selector(requestIntrestList) withObject:nil afterDelay:0.25];
     
     _imagViewMyProfilePic.layer.cornerRadius = 7.0f;
     [_imagViewMyProfilePic.layer setMasksToBounds:YES];
@@ -31,6 +35,40 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)requestIntrestList{
+    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/interest_list.php?user_id=%@",[UserDetails sharedInstance].user_id];
+    
+    [[NetworkManager sharedManager] getvalueFromServerForGetterURL:urlPath
+                                                 completionHandler:^(NSError *error, NSDictionary *result) {
+                                                     if(error) {
+                                                         NSLog(@"error : %@", [error description]);
+                                                     } else {
+                                                         // This is the expected result
+                                                         NSLog(@"Matches result : %@", result);
+                                                         if (result.count >0) {
+                                                             if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
+                                                                 NSMutableArray *arrResponse = [[NSMutableArray alloc] init];
+                                                                 
+                                                                     
+                                                                     
+                                                                     
+                                                                 
+                                                                     
+                                                                     
+                                                                 }
+                                                                 [_CollectionViewIntrest reloadData];
+                                                                 
+                                                             }else{
+                                                                 
+                                                             }
+                                                         }
+                                                     
+                                                     
+                                                     
+                                                 }];
+
 }
 
 

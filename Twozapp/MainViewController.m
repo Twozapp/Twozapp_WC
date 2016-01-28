@@ -56,7 +56,7 @@ static const float CARD_WIDTH = 290;
     cardsLoadedIndex = 0;
     
     
-    
+    // for getting list of nearby users
     loadedCards = [[NSMutableArray alloc] init];
     NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/near_friends.php?user_id=%@",[UserDetails sharedInstance].user_id];
     
@@ -364,9 +364,11 @@ static const float CARD_WIDTH = 290;
 
 }
 
+// for sending the friend request
+// Success  1 ;
 - (void)sendRequestwithStatus:(NSString *)status forFriendId:(NSString *)friendID
 {
-    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/accept.php?from_id=%@1&to_id=%@&status=%@",friendID, [UserDetails sharedInstance].user_id, status];
+    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/accept.php?from_id=%@&to_id=%@&status=%@",friendID, [UserDetails sharedInstance].user_id, status];
     
     [[NetworkManager sharedManager] getvalueFromServerForGetterURL:urlPath
                                                  completionHandler:^(NSError *error, NSDictionary *result) {

@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self performSelector:@selector(getChatList) withObject:nil afterDelay:0.25];
 }
 
 - (void)didReceiveMemoryWarning {
