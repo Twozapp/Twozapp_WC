@@ -66,7 +66,7 @@ static const float CARD_WIDTH = 290;
                                                          NSLog(@"error : %@", [error description]);
                                                      } else {
                                                          // This is the expected result
-                                                         NSLog(@"result : %@", result);
+                                                         NSLog(@"Nearest Friends result : %@", result);
                                                          if (result.count >0) {
                                                              if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
                                                                  
@@ -196,7 +196,6 @@ static const float CARD_WIDTH = 290;
                         [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1]
                         ];
     
-    // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *userName;
     NSArray *labels;
     
@@ -228,9 +227,6 @@ static const float CARD_WIDTH = 290;
     
 }
 
-
-
-
 - (IBAction)actionIntrested:(id)sender {
     
     _btnIntrested.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.001, 0.001);
@@ -255,13 +251,11 @@ static const float CARD_WIDTH = 290;
     DraggableView *draggableView = [[[NSBundle mainBundle] loadNibNamed:@"DraggableView" owner:self options:nil] lastObject];
     draggableView.frame = CGRectMake(0, 0, _viewProfile.frame.size.width, _viewProfile.frame.size.height);
     [draggableView setupView];
- //   DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - _viewProfile.frame.size.width)/2, (self.view.frame.size.height - _viewProfile.frame.size.height)/2, _viewProfile.frame.size.width, _viewProfile.frame.size.height)];
-   // draggableView.information.text = [exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
+ 
     draggableView.delegate = self;
     return draggableView;
 }
 
-//%%% loads all the cards and puts the first x in the "loaded cards" array
 -(void)loadCards
 {
     if([friendList count] > 0) {

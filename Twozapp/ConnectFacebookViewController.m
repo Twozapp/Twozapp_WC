@@ -79,12 +79,7 @@
                  } else {
                      
                      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                     //                hudProgress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-                     //                hudProgress.delegate = self;
-                     //
-                     //                hudProgress.mode = MBProgressHUDModeIndeterminate;
-                     //                hudProgress.labelText = @"Loading";
-                     //                hudProgress.dimBackground = YES;
+                   
                      
                      NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/login.php?fb_id=%@&email=%@&password=&latitude=%f&logitude=%f",[defaults stringForKey:@"fb_id"], [defaults stringForKey:@"email"],[self appDelegate].location.coordinate.latitude, [self appDelegate].location.coordinate.longitude];
                      
@@ -94,8 +89,8 @@
                                                                           [self performSegueWithIdentifier:@"tofacebook" sender:nil];
                                                                           NSLog(@"error : %@", [error description]);
                                                                       } else {
-                                                                          // This is the expected result
-                                                                          NSLog(@"result : %@", result);
+                                                                        
+                                                                          NSLog(@"Facebook login result : %@", result);
                                                                           if (result.count >0) {
                                                                               if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
                                                                                   
@@ -141,9 +136,7 @@
                                                                                   UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
                                                                                   UIViewController *profileOne = [story instantiateViewControllerWithIdentifier:@"ProfileOneViewControllerNavi"];
                                                                                   [self presentViewController:profileOne animated:YES completion:nil];
-                                                                                  //                                                                         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-                                                                                  //                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
-                                                                                  //                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
+                                                                                 
                                                                               }
                                                                           }
                                                                           else
@@ -161,15 +154,6 @@
                  
                  
              }];
-            // NSLog(@"email = %@",[result valueForKey:@"email"]);
-             
-             
-             
-             
-             
-             
-             
-             
          }
      }];
     
@@ -184,13 +168,7 @@
         [defaults setObject:[result valueForKey:@"email"] forKey:@"email"];
         [defaults setObject:[result valueForKey:@"id"] forKey:@"fb_id"];
         [defaults synchronize];
-        
-
-        
     }];
-    
-    
-    
 }
 
 - (AppDelegate *)appDelegate
