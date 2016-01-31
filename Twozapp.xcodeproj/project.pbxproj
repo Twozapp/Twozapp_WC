@@ -13,6 +13,7 @@
 		010D19511C46B50F0030B853 /* OnDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D19491C46B50F0030B853 /* OnDeck.m */; };
 		010D19521C46B50F0030B853 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D194B1C46B50F0030B853 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		010D19561C46B5D60030B853 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D19551C46B5D60030B853 /* WebServices.m */; };
+		010F95DA1C5C8881005871D2 /* IconDownloaderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 010F95D91C5C8881005871D2 /* IconDownloaderImage.m */; };
 		0159EFA51C4151070038A1F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFA41C4151070038A1F9 /* main.m */; };
 		0159EFA81C4151070038A1F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFA71C4151070038A1F9 /* AppDelegate.m */; };
 		0159EFAB1C4151070038A1F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159EFAA1C4151070038A1F9 /* ViewController.m */; };
@@ -89,6 +90,8 @@
 		010D194B1C46B50F0030B853 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		010D19541C46B5D60030B853 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
 		010D19551C46B5D60030B853 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
+		010F95D81C5C8881005871D2 /* IconDownloaderImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDownloaderImage.h; sourceTree = "<group>"; };
+		010F95D91C5C8881005871D2 /* IconDownloaderImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDownloaderImage.m; sourceTree = "<group>"; };
 		0159EFA01C4151070038A1F9 /* Twozapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twozapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0159EFA41C4151070038A1F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0159EFA61C4151070038A1F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				01E804881C49720300C4557F /* User.m */,
 				EA1115181C5003F3008A553D /* UserDetails.h */,
 				EA1115191C5003F3008A553D /* UserDetails.m */,
+				010F95D81C5C8881005871D2 /* IconDownloaderImage.h */,
+				010F95D91C5C8881005871D2 /* IconDownloaderImage.m */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				016CBFE21C4A9A2200B05436 /* ChatListViewController.m in Sources */,
 				EA11151D1C501129008A553D /* ContentViewController.m in Sources */,
 				EA09EE041C4845D500DAFA39 /* NetworkManager.m in Sources */,
+				010F95DA1C5C8881005871D2 /* IconDownloaderImage.m in Sources */,
 				016CBFDF1C4A8EEF00B05436 /* MyProfileViewController.m in Sources */,
 				017A73CD1C4582140045AB49 /* SplashViewController.m in Sources */,
 				0159EFA81C4151070038A1F9 /* AppDelegate.m in Sources */,

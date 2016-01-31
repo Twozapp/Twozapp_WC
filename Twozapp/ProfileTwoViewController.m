@@ -13,7 +13,9 @@
 #import "AppDelegate.h"
 #import "UserDetails.h"
 
-@interface ProfileTwoViewController ()< UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, MBProgressHUDDelegate>
+@interface ProfileTwoViewController ()< UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, MBProgressHUDDelegate>{
+    NSMutableString *strInterest;
+}
 
 @end
 
@@ -118,6 +120,10 @@
     
     UILabel *lblTitle = (UILabel *)[cell viewWithTag:20];
     lblTitle.text = [keys objectAtIndex:indexPath.item];
+    
+    [strInterest appendString:[keys objectAtIndex:indexPath.item]];
+    [self performSelector:@selector(requestAddInterest) withObject:nil afterDelay:0.25];
+    
     
     return cell;
 }
@@ -237,11 +243,7 @@
 }
                                                                                                                               else
                                                                                                                               {
-                                                                                                                                  
-                                                                                                                                  
-                                                                                                                                  //                                                                         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-                                                                                                                                  //                                                                         UIViewController *profileTwo = [story instantiateViewControllerWithIdentifier:@"MainViewControllerNavi"];
-                                                                                                                                  //                                                                         [self presentViewController:profileTwo animated:YES completion:nil];
+                                                              
                                                                                                                               }
                                                                                                                           }
                                                                                                                           else
@@ -468,6 +470,27 @@
     // Remove HUD from screen when the HUD was hidded
     [hudProgress removeFromSuperview];
     hudProgress = nil;
+}
+
+- (void)requestAddInterest{
+    NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/add_interest.php?user_id=%@&interest_list=%@",[UserDetails sharedInstance].user_id,strInterest];
+    NSString *finalURLPath = [urlPath stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    [[NetworkManager sharedManager] getvalueFromServerForGetterURL:finalURLPath
+                                                 completionHandler:^(NSError *error, NSDictionary *result) {
+                                                     if(error) {
+                                                         NSLog(@"error : %@", [error description]);
+                                                     } else {
+                                                         // This is the expected result
+                                                         NSLog(@"result : %@", result);
+                                                         if (result.count >0) {
+                                                             
+                                                            
+                                                             
+                                                             
+                                                 }
+                                                     }
+                                                 }];
+
 }
 
 @end

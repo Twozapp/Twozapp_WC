@@ -25,7 +25,8 @@
 
 @implementation ConnectFacebookViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     _viewFacebook.layer.cornerRadius = 5.0f;
@@ -35,19 +36,20 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Actions
 
-
-- (IBAction)actionFacebook:(id)sender {
+- (IBAction)actionFacebook:(id)sender
+{
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-    [login
-     logInWithReadPermissions: @[@"public_profile",@"user_friends",@"email"]
+    [login logInWithReadPermissions: @[@"public_profile",@"user_friends",@"email"]
      fromViewController:self
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (error) {
@@ -171,13 +173,18 @@
     }];
 }
 
+#pragma mark - Smart Function
+
 - (AppDelegate *)appDelegate
 {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
-- (void)hudWasHidden:(MBProgressHUD *)hud {
+
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
     // Remove HUD from screen when the HUD was hidded
     [hudProgress removeFromSuperview];
     hudProgress = nil;
 }
+
 @end

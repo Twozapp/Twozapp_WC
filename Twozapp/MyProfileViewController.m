@@ -46,7 +46,7 @@
                                                          NSLog(@"error : %@", [error description]);
                                                      } else {
                                                          // This is the expected result
-                                                         NSLog(@"Matches result : %@", result);
+                                                         NSLog(@"Intrest result : %@", result);
                                                          if (result.count >0) {
                                                              if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
                                                                  NSMutableArray *arrResponse = [[NSMutableArray alloc] init];

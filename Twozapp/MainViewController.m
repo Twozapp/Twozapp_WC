@@ -180,6 +180,7 @@ static const float CARD_WIDTH = 290;
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Actions
 
 - (IBAction)actionSideMenu:(id)sender {
     
@@ -296,9 +297,8 @@ static const float CARD_WIDTH = 290;
     
 }
 
-#warning include own action here!
-//%%% action called when the card goes to the left.
-// This should be customized with your own action
+#pragma mark - Card swipe Action
+
 -(void)cardSwipedLeft:(UIView *)card;
 {
     //do whatever you want with the card that was swiped
@@ -318,8 +318,6 @@ static const float CARD_WIDTH = 290;
     
 }
 
-//%%% action called when the card goes to the right.
-// This should be customized with your own action
 -(void)cardSwipedRight:(UIView *)card
 {
     //do whatever you want with the card that was swiped
@@ -337,7 +335,7 @@ static const float CARD_WIDTH = 290;
     
 }
 
-//%%% when you hit the right button, this is called and substitutes the swipe
+
 -(void)swipeRight
 {
     DraggableView *dragView = [loadedCards firstObject];
@@ -350,7 +348,6 @@ static const float CARD_WIDTH = 290;
     [self sendRequestwithStatus:@"0" forFriendId:friend.frdId];
 }
 
-//%%% when you hit the left button, this is called and substitutes the swipe
 -(void)swipeLeft
 {
     DraggableView *dragView = [loadedCards firstObject];
@@ -364,8 +361,6 @@ static const float CARD_WIDTH = 290;
 
 }
 
-// for sending the friend request
-// Success  1 ;
 - (void)sendRequestwithStatus:(NSString *)status forFriendId:(NSString *)friendID
 {
     NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/accept.php?from_id=%@&to_id=%@&status=%@",friendID, [UserDetails sharedInstance].user_id, status];
