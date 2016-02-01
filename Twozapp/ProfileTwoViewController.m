@@ -34,6 +34,7 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)];
     [self.view addGestureRecognizer:tap];
     keys = [[NSMutableArray alloc] init];
+    strInterest = [[NSMutableString alloc] init];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
@@ -121,8 +122,8 @@
     UILabel *lblTitle = (UILabel *)[cell viewWithTag:20];
     lblTitle.text = [keys objectAtIndex:indexPath.item];
     
-    [strInterest appendString:[keys objectAtIndex:indexPath.item]];
-    [self performSelector:@selector(requestAddInterest) withObject:nil afterDelay:0.25];
+   // [strInterest appendString:[keys objectAtIndex:indexPath.item]];
+    
     
     
     return cell;
@@ -255,6 +256,9 @@
                                                                                                                       }
                                                                                                                       
                                                                                                                       [self hudWasHidden:hudProgress];
+                                                                           
+                                                                                                                      
+                                                                          [self performSelector:@selector(requestAddInterest) withObject:nil afterDelay:0.25];
                                                                                                                   }];
                                                                      }
                                                                  }
@@ -473,6 +477,12 @@
 }
 
 - (void)requestAddInterest{
+    
+    
+    for (NSString *str in keys) {
+        [strInterest appendString:str];
+    }
+    
     NSString  *urlPath    = [NSString stringWithFormat:@"http://infowebtechsolutions.com/demo/twzapp/add_interest.php?user_id=%@&interest_list=%@",[UserDetails sharedInstance].user_id,strInterest];
     NSString *finalURLPath = [urlPath stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     [[NetworkManager sharedManager] getvalueFromServerForGetterURL:finalURLPath

@@ -36,8 +36,14 @@
                                                          NSLog(@"Matches result : %@", result);
                                                          if (result.count >0) {
                                                              if ([result[@"response"][@"Success"] isEqualToString:@"1"]) {
+                                                                 if (result[@"response"][@"Details"] != [NSNull null]) {
+                                                                     
+                                        
                                                                  NSMutableArray *arrResponse = [[NSMutableArray alloc] init];
                                                                  arrResponse = result[@"response"][@"Details"];
+                                                                 if (arrResponse.count > 0) {
+                                                                
+                                                                 
                                                                  for (int i = 0; i<= [arrResponse count]; i++) {
                                                                      UserFriends *userFriends = [[UserFriends alloc] init];
                                                                      userFriends.fndImage = [[arrResponse objectAtIndex:i] objectForKey:@"profile_picture1"];
@@ -57,6 +63,8 @@
                                                                      
                                                                  }
                                                                  [_collectionView reloadData];
+                                                                 }
+                                                                 }
                             
                                                              }else{
                                                                  
